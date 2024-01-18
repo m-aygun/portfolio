@@ -1,45 +1,25 @@
 ---
-title: "Tilskuertalsprognoser og Forretningsoptimering (1. semester projekt)"
-subtitle: "En dataanalysebaseret tilgang for Viborg F.F. mod 2024"
-author: 
+title: "Portefolio"
+description: Prdiction of viewers for VFF homegames
+date: today # other options: now, last-modified
+author:
   - name: Mette
-    affiliation: 27.409
-author-title: Gruppe 5
-affiliation-title: Antal anslag
-date: 01/05/23
-published-title: Afleveringsdato
-descriprion: Kagemand kummerfryser og småkager
-title-block-banner: true
-doi: Bjarne the man
-doi-title: Vejleder
+    affiliation: Erhvervsakademi Dania
+title-block-banner: true 
 format:
-  html:
-    lang: da
+  html: 
     theme: flatly
-    # code-fold: true
     toc: true
     number-sections: true
-editor: 
-  markdown: 
-    wrap: 72
-papersize: a4
-geometry:
- - top=30mm
- - left=20mm
- - right=20mm
- - bottom=30mm
- - heightrounded
-fontsize: 12pt
-mainfont: Arial
-linestretch: 1.5
-code-fold: true
-execute:
-  output: false
-  warning: false
-  include: false
+  pdf:
+    theme: flatly
+    toc: true
+    number-sections: true
+editor: source
+
 ---
 
-<!-- Forslag til indhold: -->
+
 
 # Introducion
 
