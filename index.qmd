@@ -12,6 +12,11 @@ format:
     code-fold: true
     toc: true
     number-sections: true
+  pdf:
+    theme: flatly
+    toc: true
+    number-sections: true
+editor: source
 ---
 
 # Introduction
