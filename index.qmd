@@ -1,0 +1,465 @@
+---
+title: "Tilskuertalsprognoser og Forretningsoptimering (1. semester projekt)"
+subtitle: "En dataanalysebaseret tilgang for Viborg F.F. mod 2024"
+author: 
+  - name: Mette
+    affiliation: 27.409
+author-title: Gruppe 5
+affiliation-title: Antal anslag
+date: 01/05/23
+published-title: Afleveringsdato
+descriprion: Kagemand kummerfryser og småkager
+title-block-banner: true
+doi: Bjarne the man
+doi-title: Vejleder
+format:
+  html:
+    lang: da
+    theme: flatly
+    # code-fold: true
+    toc: true
+    number-sections: true
+editor: 
+  markdown: 
+    wrap: 72
+papersize: a4
+geometry:
+ - top=30mm
+ - left=20mm
+ - right=20mm
+ - bottom=30mm
+ - heightrounded
+fontsize: 12pt
+mainfont: Arial
+linestretch: 1.5
+code-fold: true
+execute:
+  output: false
+  warning: false
+  include: false
+---
+
+<!-- Forslag til indhold: -->
+
+```{r}
+# Funktion til at generere tilfældige bogstaver
+generate_random_letter <- function() {
+  letters <- c(letters, LETTERS)
+  return(sample(letters, 1))
+}
+
+# Antal rækker og kolonner
+rows <- 10
+columns <- 4
+
+# Opret en tom matrix til tabellen
+random_table <- matrix(nrow = rows, ncol = columns)
+
+# Udfyld tabellen med tilfældige bogstaver
+for (i in 1:rows) {
+  for (j in 1:columns) {
+    random_table[i, j] <- generate_random_letter()
+  }
+}
+
+# Konverter matrix til en data frame for at gøre det mere læsevenligt
+random_table <- as.data.frame(random_table)
+
+# Udskriv tabellen
+print(random_table)
+
+```
+
+# Indledning
+
+## Introduktion
+
+Viborg FF er en klub med dybe rødder i den danske fodboldkultur. Siden
+Viborg FF blev stiftet i 1896, har klubben oplevet adskillige op- og
+nedture, som da de går fra at være et 1. divisionshold i 1998, til at
+vinde pokalturneringen i år 2000. I dag står klubben dog over for en
+anden form for kamp - en kamp mod datakompleksiteter og manglende
+klarhed i organisatoriske strukturer.
+
+Viborg FF er ligesom andre topklubber i dansk fodbold organiseret i to
+nøgleafdelinger - den sportslige enhed, der fokuserer på præstationer på
+banen, og den kommercielle afdeling der har til formål at styrke
+klubbens forretnings udenfor stadion. Selvom det er 2 vidt forskellige
+forretningsområder har begge afdelinger stor indflydelse på klubbens
+økonomiske situation. Efter holdet formåede at rykke op i Superligaen i
+2021/22 har Viborg FF oplevet en økonomisk fremgang med bl.a. stigende
+tv-indtægter, sponsorindtægter og entreindtægter mm.
+
+I den moderne fodboldverden er datadrevne beslutningerne blevet en
+afgørende faktor for at fodboldklubber kan opnå succes. Klubbernes evne
+til at indsamle, analysere og anvende data til deres fordel, har
+udviklet sig til at blive en konkurrenceparameter, som ikke blot styrker
+præstationerne på banen, men også forretningen udenfor stadion. En klub,
+der befinder sig midt i denne spændende transformation mod at dygtiggøre
+sig på at foretage datadrevne beslutninger, er Viborg FF.
+
+![(Dania x Viborg FF. Data -- ja selvfølgelig, men hvordan..,
+2023)](images/mision.png){fig-alt="(Dania x Viborg FF. Data – ja selvfølgelig, men hvordan.., 2023)"
+fig-align="center"}
+
+## Problemstilling
+
+Viborg FF er midt i en transformation mod at blive en virksomhed, der
+træffer afgørende beslutninger og henter indsigter fra data. Deres
+vision er tydelig: at intensivere brugen af data for bedre at forstå
+deres fans og optimere forretningen. Selvom de mener at have en
+veldefineret strategi, har de i løbet af de seneste tre år stået over
+for udfordringer i både dataindsamling og anvendelse, hvilket resulterer
+i tab af vigtige indsigter og beslutninger uden et solidt datagrundlag.
+
+VFF står over for kompleksiteter i form af uforenelige systemer, der
+ikke kan kommunikere, og en manglende struktur i indsamling og
+opbevaring af data. Den manglende klarhed i ansvarsområder og
+infrastrukturelle svagheder forstærker problemet yderligere, og det er
+afgørende at identificere samt implementere effektive løsninger.
+
+For at løse disse udfordringer er en dybere forståelse af klubkulturen
+og kollegernes holdning til datadrevne initiativer nøglen. Skabelsen af
+en mere effektiv datadrevet kultur kræver ikke kun teknologiske
+forbedringer, men også en forankring af datamodenhed i hele
+organisationen.
+
+## Problemformulering
+
+På baggrund af dette, formuleres følgende problemformulering:
+
+Hvordan kan Viborg F.F. implementere dataanalysemetoder for at forudsige
+tilskuertal til specifikke kampe og hvordan kan forretningen inden
+udgangen af 2024 optimeres på baggrund af forudsigelsen?
+
+-   Undersøgelsesspørgsmål 1: Hvilke variabler har haft indflydelse på
+    tilskuertallets udvikling siden 2007?
+
+-   Undersøgelsesspørgsmål 2: Hvordan bruges data i organisationen i
+    dag?
+
+-   Undersøgelsesspørgsmål 3: Hvordan kan Viborg F.F. udvikle den
+    nødvendige teknologiskeinfrastruktur til at indsamle, lagre og
+    analysere data fra flere kilder for at forbedre deres forudsigelser
+    af tilskuertal? 
+
+## Afgrænsning
+
+-   COVID-19 restriktioner påvirkede tilskuertal for 2019-2020-sæsonen.
+
+-   Fokus primært på kommerciel afdeling; sportsafdelingen bruger
+    allerede mere data.
+
+-   Studie begrænser sig til perioden efter 2007, relateret til Viborgs
+    nye faciliteter.
+
+-   ·Sponsorrelateret fokus mangler på grund af begrænset data og
+    måleudfordringer.
+
+-   Succes antages at forbedre sponsorater for Viborg FF.
+
+-   Pokal- og venskabskampe udeladt for at skabe specifikt fokus.
+
+-   Projektet fokuserer på dataindsamling og -optimering; frivillig
+    afdeling udeladt.
+
+-   Begrænset indsigt i virksomhedens processer grundet manglende data.
+
+# Videnskabsteori og metode
+
+I det kommende afsnit udforskes ontologien, epistemologien og
+metodologien, som udgør de fundamentale principper for denne
+undersøgelse. Der tages udgangspunkt i researchonion (Salung & P, 2021)
+som et struktureret værktøj til undersøgelse. Ved at præcisere vores
+undersøgelsesdesign skabes en sammenhængende tråd gennem hele studiet,
+hvilket ikke blot sikrer en velovervejet besvarelse af
+problemformuleringen, men også klargør opgavens formål.
+
+## Ontologi
+
+I dette projekt anvendes et pragmatisk paradigme grundet dets
+problemorienterede og praksisrettede natur. Denne tilgang kombineres med
+et positivistisk perspektiv for at sikre en objektiv analyse og
+forståelse af kausale forbindelser og forudsigelser baseret på
+kvantitative observationer.
+
+## Epistemologi
+
+Undersøgelsesdesignet er en 'mixed methods' tilgang, som kombinerer både
+kvantitative og kvalitative data for at sikre dybde og bredde i
+analysen. Kvantitative data hentes fra DMI.dk, Superstats.dk, DST.dk og
+Kalender-365.dk , mens kvalitative data primært indsamles gennem
+interviews med relevante parter hos Viborg FF.
+
+## Metodologi
+
+Projektet bygger på et casestudie af Viborg FF, hvor specifikke emner og
+kontekster undersøges gennem både kvalitative interviews og kvantitativt
+spørgeskema. Dette giver en omfattende forståelse af organisationens
+funktion, dataanvendelse og overordnede struktur.
+
+## Kvalitetssikring og kildekritik
+
+Der indhentes kvantitative data fra kilder der vurderes valide og
+objektive. P
+
+**For en fuldstændig gennemgang af metodeafsnittet, herunder detaljerede
+beskrivelser af dataindsamlingsmetoder, undersøgelsesdesign, og de
+anvendte analytiske tilgange, se Bilag A.**
+
+# CRISP DM -- Databrug
+
+I de kommende afsnit foretages en omfattende analyse af virksomheden med
+udgangspunkt i CRISP-DM-teorien (Cody Baldwin, 2021). Analysen sigter
+mod at opnå en dybdegående forståelse af dataanvendelse, præparering, og
+modellering.
+
+![("Cross-Industry Standard Process for Data Mining",
+2023)](images/crispdm.jpg){fig-alt="(“Cross-Industry Standard Process for Data Mining”, 2023)"
+fig-align="center"}
+
+## Organisation
+
+Det næste afsnit analyserer organisationens struktur via Mintzbergs
+organisationsformer og grundprincipper (Kousholt, 2014). Dette vil
+detaljere strukturen, arbejdsgange, hierarki, processer og vidensdeling.
+For fuld gennemgang, se BILAG B.
+
+![Egen tilvirkning (Wikipedia,
+u.å.)](images/Mintz.png){fig-alt="Egen tilvirkning (Wikipedia, u.å.)"
+fig-align="center"}
+
+### Datakompetencer og -anvendelse:
+
+Det er observeret, at der er en varierende grad af datakompetencer
+blandt medarbejderne, hvilket fører til uensartede og til tider
+uforudsigelige løsninger. Selvom nogle afdelinger, som
+Marketingafdelingen, anvender data intensivt, er der en generel mangel
+på ensartethed i dataanvendelse på tværs af organisationen. Dette
+understreger behovet for en mere koordineret tilgang til datastyring og
+-uddannelse.
+
+### Funktions- og Produktspecifik Dataanvendelse:
+
+Organisationen er opdelt i kommercielle og sportslige afdelinger, med
+yderligere underafdelinger, der arbejder med specifikke produkter eller
+funktioner. Denne opdeling har resulteret i en fragmenteret
+dataanvendelse, hvor afdelinger ikke systematisk samkører data. Dette
+kan føre til tab af indsigt og potentiel ineffektivitet, da de enkelte
+afdelinger kan miste følingen med hinanden og organisationens samlede
+mål.
+
+### Horisontal Vidensdeling:
+
+Uenigheder og varierende opfattelser af datas potentiale og anvendelse
+indikerer en mangel på horisontal vidensdeling. Dette fremhæver behovet
+for en styrket dialog og udveksling af bedste praksisser mellem
+afdelingerne for at sikre, at data anvendes effektivt og strategisk på
+tværs af hele organisationen.
+
+**For en dybere og mere detaljeret gennemgang af organisationens
+struktur, beslutningsprocesser, og fulde analyse af datakompetencer og
+-anvendelse, se venligst Bilag B.**
+
+## **Delkonklusion**
+
+Analysen viser, at uens datakompetencer og fragmenteret dataanvendelse
+fører til ineffektivitet og svage beslutninger. Manglende deling og
+integration af data begrænser strategien. For at tackle dette, er en
+koordineret datastyringsstrategi med fokus på ensartet uddannelse og
+dataintegration nødvendig, hvilket vil optimere beslutninger og styrke
+den strategiske stilling.
+
+## Kultur
+
+Det næste afsnit analyserer virksomhedens kultur via Scheins
+Kulturniveauer (Hansen et al., u.å.) for en tredelt indsigt i
+artefakter, skueværdier og dybere niveauer, samt vurderer kulturens
+styrke med Laloux (Laloux, u.å.). Det vil også undersøge vigtige
+artefakter som spillerne i en marketingkontekst. Se BILAG X for fuld
+gennemgang.
+
+**Scheins Kulturniveauer**
+
+Nogle af virksomhedens vigtigste artefakter er spillerne. Dette udnytter
+til en marketingsmæssig fordel ved at lancere en app, hvor man kan
+"chatte" med sin yndlingsspiller. Virksomheden har en meget klar vision
+og mission, og denne kommunikeres meget effektivt ud til alle
+afdelinger. Hovedsædet fremstår meget digitaliseret med blandt andet en
+biograf emd moderne faciliteter, men der er også mange ting der kunne
+optimereres. Når det kommer til skueværdier, mener Daniel Behr at
+virksomheden er meget datadreven, og at han føler der er opbakning til
+hans vision om at få et data Warehouse inden for de næste 2 år. På det
+dybere niveau, mener Daniel  at marketing bruger data meget, hvorimod
+Daniel Lindemann slår fast, at de ikke bruger det nok (D. Lindemann,
+personlig kommunikation, 2023)
+
+### Delkonklusion
+
+Virksomhedens kultur præges af stolthed og loyalitet, hvilket skaber en
+stærk familiefølelse og fælles mål. Trods klare værdier, mission og
+vision, er der uklarhed om strategien for at blive mere datadrevet og
+etablere et data Warehouse, hvilket fører til forvirring og manglende
+dataforståelse blandt personalet.
+
+## Datamodenhed
+
+I det nedenstående afsnit belyses virksomhedens datamodenhed. Der tages
+udgangspunkt i Alexandra modellen (Kølsen et al., u.å.), som ved at
+analyse Ressourcer og aktiviteter, Værdi og den Sociale virkelighed kan
+placere virksomheden på en skala fra 1-5 i datamodenhedsprocessen.
+
+**Alexandra modellen**
+
+**Værdier**
+
+Virksomheden ønsker at forstå forretningen bedre og målrette kunder
+gennem databaseret kundesegmentering, baseret på tidligere analyser.
+Selvom data allerede anvendes, anerkender marketingafdelingen et behov
+for større anvendelse(D. Lindemann, personlig kommunikation, 2023).
+Ifølge Behr understøtter data nuværende processer, og der er et mål om
+at udvikle data til et produkt, hvilket skal føre til en smartere
+arbejdsproces (*Dania x Viborg FF. Data -- ja selvfølgelig, men
+hvordan..*, 2023).
+
+**Ressourcer og aktiviteter**
+
+Virksomheden ønsker at forstå forretningen bedre og målrette kunder
+gennem databaseret kundesegmentering, baseret på tidligere analyser.
+Selvom data allerede anvendes, anerkender marketingafdelingen et behov
+for større anvendelse (D. Behr, personlig kommunikation, 2023). Ifølge
+Behr understøtter data nuværende processer, og der er et mål om at
+udvikle data til et produkt, hvilket skal føre til en smartere
+arbejdsproces (*Dania x Viborg FF. Data -- ja selvfølgelig, men
+hvordan..*, 2023).
+
+**Social virkelighed**
+
+Virksomheden sigter mod at gøre digitalisering og data til en
+indtægtskilde, selvom de endnu ikke fokuserer på big data (*Dania x
+Viborg FF. Data -- ja selvfølgelig, men hvordan..*, 2023). Med en
+dataanalytiker frem for en IT-afdeling, er de usikre på specifik
+dataanvendelse, men Daniel Behr ser stort potentiale for fremtidig vækst
+(D. Behr, personlig kommunikation, 2023).
+
+## **Delkonklusion**
+
+Baseret på analysen befinder virksomheden sig et sted mellem trin 1 og 2
+i Alexandra datamodenhedsmodellen. Der er variation i datamodenheden på
+tværs af afdelinger, og der er plads til forbedringer for at opnå den
+ønskede datadrevne kultur. Det er værd at bemærke, at virksomheden
+mangler et data Warehouse, samkøring af data på tværs af afdelinger og
+interoperabilitet mellem systemer. Virksomhedens strategi fremadrettet
+er stadig under udvikling.
+
+## Systemer -- Herunder data registreret nu
+
+I det følgende afsnit analyseres virksomhedens systemer herunder data
+infrastruktur. Der tages udgangspunkt i Modern Datastack
+(Undervisningsnoter, Datamodenhed 21/11/23, 2023a). Modern datastack
+giver et godt overblik over de trin der bør overvejes ved indsamling,
+lagring og brug af data.
+
+![(Dania x Viborg FF. Data -- ja selvfølgelig, men hvordan..,
+2023)](images/Systemer.png){fig-alt="(Dania x Viborg FF. Data – ja selvfølgelig, men hvordan.., 2023)"
+fig-align="center"}
+
+**Data der er registreret nu:**
+
+Virksomheden har en række kontaktpunkter hvorfra de indsamler
+førsteparts data. Lige nu har de følgende data på deres kunder:  Køn,
+afstand til kamp, Kaffe eller The, Børn, placering på stadion.
+
+**Source:**
+
+Joomla, Shopify, Eventil, Clubmiser, Ditbetalingssystem, ITpilot,
+Leadfamly, MailChimp, Email, Facebookannoncer, Google Ads, deres App og
+sms. Det er altså overvejende 3 parts apps, der generer deres data.
+
+**Ingestion:**
+
+Det har desværre ikke været muligt at finde information om hvordan data
+transporteres fra sources til storage.
+
+**Storage:**
+
+Data opbevares i Excel på diverse computere.
+
+**Retriveal:**
+
+Data hentes i Power BI og Excel
+
+**Output:**
+
+Data forvandles til insights i Rstudio, Excel og PowerBI
+
+## **Delkonklusion:**
+
+Virksomheden har detaljeret kundedata grundet kundeloyalitet (M. R. Petz
+& Lauesen, u.å.) og app-interaktioner, men står overfor udfordringer med
+spredt data og begrænset teknologi. For forretningsforbedringer
+anbefales investering i sammenhængende datainfrastruktur og avanceret
+datamanagement.
+
+## Benchmark inspiration fra andre virksomheder
+
+For at finde ud af hvordan Viborg FF er stillet i relation til
+datamodenhedsprocessen, vil klubben i dette afsnit blive sammenlignet
+med FC København. For at benchmark Viborg FF mod FC København i
+datamodenhedsprocessen, sammenlignes deres tilgang til data og
+ressourcer. For den fuldstændige analyse henvises til BILAG 4
+
+**Benmarkanalyse**
+
+FCK, der anses som en af de førende i datadrevne processer i superliga,
+har investeret i højtuddannede medarbejdere og etableret et data
+Warehouse for at understøtte avancerede strategier. VFF, derimod, har
+begrænsede ressourcer med kun én deltidsansat og mangler et data
+Warehouse, hvilket begrænser deres datamodenhed og potentiale for
+avancerede strategier. Begge klubber indsamler lignende kundedata og
+søger at udnytte data som en indtægtskilde, med VFF i de tidlige faser
+af at lancere en app til yderligere dataindsamling. Viborg FF's
+udfordringer afspejler behovet for ressourceallokering og
+kompetenceudvikling for at konkurrere effektivt.
+
+## **Delkonklusion**
+
+Benchmark-analysen viser, at FC København er foran Viborg FF i
+datamodenhed, primært på grund af Viborgs begrænsede ressourcer og
+mangel på data Warehouse. For at konkurrere på samme niveau som FCK,
+skal Viborg FF investere betydeligt i teknologi og talent.
+
+# Datainitiativer
+
+## Datagrundlag
+
+### Importer data til R og Merging af datasæt
+
+For at importere data har vi brugt funktionen html() til at webscrabe
+samt oprettet løkker for at automatisere importen af data for sæsoner
+fra 2007/2008 til og med 2023/2024. Der foretager yderligere import
+gennem API kald fra DMI og DST. Data kombineres, og merges hvorefter der
+kan foretages statistisk analyse.
+
+### Udvælgelse af relevante variabler
+
+Projektgruppen valgte relevante variabler for tilskuertal baseret på
+egen antagelse og kilder som Viborg FF og Binjwaied(Binjwaied et al.,
+2015), som påpeger faktorer som TV-transmissioner. Vigtige variabler som
+socialt samvær og billetpriser blev udeladt pga. datamangel. De udvalgte
+variabler inkluderer vejrforhold (DMI: nedbør, temperatur, vind,
+synlighed, fugtighed), helligdage, ferie, tidspunkt, holdform,
+modstander, liga, runde, TV-transmission og indbyggertal.
+
+### Tidy data
+
+Under processen med at hente data gennem API og webscrabing renses
+dataene løbende. 
+
+Det var ikke muligt at hente data om indbyggertallet før 2008, og derfor
+blev der tilføjet en værdi fra en ekstern kilde til at udfylde disse
+observationer. NA værdier fjernes for at kunne arbejde effektivt med
+datasættet og yderligere fjernes de observationer hvor virksomheden var
+begrænset grundet Corona restriktioner. Der er enkelte dage, hvor der
+ikke er nogen DMI-observationer. Dette antages at vejrstationen på disse
+dage, ikke var tilgængelige
