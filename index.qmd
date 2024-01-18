@@ -1,6 +1,6 @@
 ---
 title: "Portefolio"
-description: Prdiction of viewers for VFF homegames
+description: Prediction of viewers for VFF homegames
 date: today # other options: now, last-modified
 author:
   - name: Mette
