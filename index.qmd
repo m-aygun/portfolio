@@ -48,3 +48,19 @@ pacman::p_load("rvest", "purrr", "data.table", "stringr", "tidyr", "zoo",
                "RSQLite", "class", "nasaweather",
                "fueleconomy", "viridis", "boot", "glmnet", "pls", "tidyverse", "dplyr","corrplot")
 ```
+
+## Importing data
+
+## CRISP-DM metodology
+
+### Business understanding
+
+### Data Understanding
+
+### Data Preparation
+
+### Modeling
+
+### Evaluation
+
+### Implementation
