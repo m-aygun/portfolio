@@ -16,10 +16,7 @@ format:
     toc: true
     number-sections: true
 editor: source
-
 ---
-
-
 
 # Introducion
 
@@ -30,3 +27,7 @@ Viborg FF, with its rich history and dedicated fanbase, presents an interesting 
 The objective of this endeavor is not only to aid Viborg FF in planning and resource allocation but also to contribute to the broader field of sports analytics. By offering insights into fan behavior and attendance patterns, this model seeks to enhance the understanding of factors driving spectator turnout in soccer, particularly within the context of Danish football.
 
 In the following sections, the methodology, data sources, analytical techniques, and results of the prediction model will be thoroughly discussed, demonstrating the model's effectiveness and potential applications.
+
+# Analysis
+
+The project embarked on developing a predictive model for estimating the attendance at Viborg FF home games with a structured and methodical approach. The initial stage involved importing data through API calls and web scraping, a technique that proved essential in gathering a diverse range of public data. This included team performance statistics, league standing, TV channels, weather conditions, and details of special events.
