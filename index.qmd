@@ -904,7 +904,6 @@ fulldata$indbyggertal[1:18] <- 90518
 sl_klar <- fulldata
 
 
-
 ```
 
 This creates a dataset with 542 observations, that we can investigate
@@ -1031,6 +1030,12 @@ fulldata5 <- fulldata4 %>% dplyr::select("Tilskuere", "Superliga/1.Division", "F
 In order to model the data I will make training data and test data.
 
 ```{r}
+#| echo: false
+#| code-fold: true
+#| warning: false
+#| results: true
+#| output: false
+
 dim(fulldata4)
 
 # Laver en logist vektor, hvis length er lig med antallet af 
@@ -1038,7 +1043,7 @@ dim(fulldata4)
 # tilfældige TRUE og FALSE værdier. Der genereres cirka lige 
 # mange TRUE og FALSE - værdier:
 
-# Bemærk at nrow(fulldata2) = 235
+# Bemærk at nrow(fulldata2) = 237
 
 
 set.seed(5)
@@ -1066,6 +1071,10 @@ fulldata4[test,]
 After this the model is fitted to training data using linear multiple regression, and this is the coeeficients of out model.
 
 ```{r}
+#| echo: false
+#| code-fold: true
+#| warning: false
+#| results: true
 
 lm.fit1 <- lm(Tilskuere ~ ., data = fulldata5[train, ])
 
@@ -1078,6 +1087,10 @@ summary(lm.fit1)
 After this I am checking for outliers using studentized residuals.
 
 ```{r}
+#| echo: false
+#| code-fold: true
+#| warning: false
+#| results: true
 
 residuals <- residuals(lm.fit1)
 
@@ -1103,17 +1116,13 @@ outlier_values <- studentized_residuals[outliers]
 outlier_data <- data.frame(Outlier_Index = outlier_indices, Studentized_Residual = outlier_values)
 print(outlier_data)
 
-outlier_data
 ```
 
-I wil now test the model on new data, the testdata
+### Evaluation
+
+I will now test the model on new data, the testdata. Validation method used is 5-fold CV due to the balance between bias and variance.
 
 ```{r}
-
-# first the Y and X variables are defined
-
-x <- model.matrix(Tilskuere ~ ., fulldata5)[, -1]
-y <- fulldata5$Tilskuere
 
 #the model is tested on new data.
 
@@ -1126,6 +1135,6 @@ velovervejede.mse <- mean((fulldata5[test,]$Tilskuere - predicted_values)^2)
 velovervejede.mse
 ```
 
-### Evaluation
+
 
 ### Implementation
