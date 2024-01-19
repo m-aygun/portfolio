@@ -46,19 +46,19 @@ pacman::p_load("rvest", "purrr", "data.table", "stringr", "tidyr", "zoo",
                "XML", "httr", "jsonlite", "microbenchmark",
                "splines", "ISLR2", "MASS", "testthat", "leaps", "caret",
                "RSQLite", "class", "nasaweather",
-               "fueleconomy", "viridis", "boot", "glmnet", "pls", "tidyverse", "dplyr","corrplot")
-
+               "fueleconomy", "viridis", "boot", "glmnet", "pls", "tidyverse", "GGally", "reshape2", "ggplot2", "dplyr","corrplot")
 
 ```
 
 ## Importing data
 
-Data is imported by API-call and webscrabing. All the data is public available. Data is imported from DMI, DST, kalender365.dk and www.superstats.dk. By the end dataset fare merged and cleaned in order to do the statistical analysis. Different variables are added in order to perform explorative analysis.
+Data is imported by API-call and webscrabing. All the data is publicly available. Data is imported from DMI, DST, kalender365.dk and www.superstats.dk. By the end dataset are merged and cleaned in order to do the statistical analysis. Different variables are added in order to perform explorative analysis.
 
 ```{r}
 #| echo: true
-#| results: false
-#| execute: false
+#| code-fold: true
+#| warning: false
+#| results: true
 
 #Vi starter med at hente  tabeller for superligaen, alle sæsoner mellem 2007/2008 - 2023/2024
 
@@ -903,6 +903,7 @@ fulldata$indbyggertal[1:18] <- 90518
 
 sl_klar <- fulldata
 
+#vi skaber en interaktiv tabel
 datatable(sl_klar, caption = htmltools::tags$caption(
     style = 'caption-side: top; text-align: center;',
     'Table 1: ', htmltools::em('Viborg FF kampe since 2007 '))
@@ -925,9 +926,9 @@ First we remove the timeperiod where VFF was restricted by corona. After this we
 
 ```{r}
 #| echo: true
-#| results: false
-#| execute: false
-#| warnings: false
+#| code-fold: true
+#| warning: false
+#| results: true
 
 start_dato <- as.Date("2020-03-07")
 slut_dato <- as.Date("2021-04-16")
@@ -947,7 +948,63 @@ sl_klar = sl_klar %>%
 
 ### Data Preparation
 
+After importing the data the data has been cleaned and quantitative and qualitative variabels has been created
+
 ### Modeling
+
+### Explorative analysis
+
+In order to determin the significance of the qualitative variables I perform a corelationanalysis using a corelation heatmap. I wish to determine if there is any correlation bwtween the quantitative variables and Y (Tilskuere)
+
+```{r}
+#| echo: false
+#| code-fold: true
+#| warning: false
+#| results: true
+
+cor_matrix <- cor(sl_klar[,c("Tilskuere", "Temperatur", "Vindhastighed", 
+                               "Fugtighed", "Synlighed", "Nedbør sidste time", 
+                               "Fugtighed den sidste time", "indbyggertal")], use = "complete.obs")
+
+# Omdannelse af matrix til et data frame for visualisering
+melted_cor_matrix <- melt(cor_matrix)
+
+# Visualisering af korrelationsmatrix
+ggplot(melted_cor_matrix, aes(Var1, Var2, fill = value)) +
+  geom_tile() +
+  scale_fill_gradient2(low = "blue", high = "red", mid = "white", 
+                       midpoint = 0, limit = c(-1,1)) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  labs(fill = "Korrelation")
+
+ggpairs(sl_klar[, c("Tilskuere", "Temperatur", "Vindhastighed", 
+                      "Fugtighed", "Synlighed", "Nedbør sidste time", 
+                      "Fugtighed den sidste time", "indbyggertal")], 
+        lower = list(continuous = wrap("cor", size = 3)),
+        diag = list(continuous = "densityDiag"))
+
+```
+
+Her we can determin that there is a correlation between Indbyggertal and Synlighed. Thereforewe will now check for correlation between these two variables. I am filtering out the non relevant variables as well.
+
+```{r}
+#| echo: true
+#| results: false
+#| execute: false
+#| warning: false
+
+# Beregn korrelationen
+korrelation <- cor(sl_klar$indbyggertal, sl_klar$Synlighed, use = "complete.obs")
+
+
+numeric_data <- sl_klar[sapply(sl_klar, is.numeric)]
+
+# Jeg fravælger Fugtighed, vindhastighed, Nedbør sidste time, Fugtighed sidste time og temperatur.
+
+fulldata4 <- sl_klar %>% 
+  dplyr::select(-Fugtighed, -Vindhastighed, -`Nedbør sidste time`, -`Fugtighed den sidste time`, -Temperatur)
+```
 
 ### Evaluation
 
