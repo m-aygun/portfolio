@@ -958,7 +958,7 @@ After importing the data the data has been cleaned and quantitative and qualitat
 
 ### Modeling
 
-### Explorative analysis
+## Explorative analysis
 
 In order to determin the significance of the qualitative variables I perform a corelationanalysis using a corelation heatmap. I wish to determine if there is any correlation bwtween the quantitative variables and Y (Tilskuere)
 
@@ -992,7 +992,7 @@ ggpairs(sl_klar[, c("Tilskuere", "Temperatur", "Vindhastighed",
 
 ```
 
-Her we can determin that there is a correlation between Indbyggertal and Synlighed. Therefore we will now check for correlation between these two variables. I am filtering out the non relevant variables as well.
+Here we can determin that there is a correlation between Indbyggertal and Synlighed. Therefore we will now check for correlation between these two variables. I am filtering out the non relevant variables as well.
 
 ```{r}
 #| echo: true
@@ -1012,7 +1012,7 @@ fulldata4 <- sl_klar %>%
   dplyr::select(-Fugtighed, -Vindhastighed, -`Nedbør sidste time`, -`Fugtighed den sidste time`, -Temperatur)
 ```
 
-I will not check the significance of each variable. Here we can se that the significant variables are: Superliga, ferie, Dagtype, Tid på dagen og Synlighed, and I chose to continue with these.
+I will now check the significance of each variable. Here we can se that the significant variables are: Superliga, ferie, Dagtype, Tid på dagen og Synlighed, and I chose to continue with these.
 
 ```{r}
 #| echo: false
@@ -1024,7 +1024,19 @@ I will not check the significance of each variable. Here we can se that the sign
 lm.fit <- lm(Tilskuere ~ ., data = fulldata4)
 summary(lm.fit)
 
-fulldata5 <- fulldata4 %>% dplyr::select("Tilskuere", "Superliga/1.Division", "Ferieuger", "Modstander Type", "Dagtype", "Synlighed")
+fulldata5 <- fulldata4 %>% dplyr::select("Tilskuere", "Superliga/1.Division", "Ferieuger", "Modstander Type", "Tid på dagen", "Dagtype", "Synlighed")
+
+library(dplyr)
+
+fulldata5 <- fulldata5 %>% rename(Superliga1division = `Superliga/1.Division`)
+library(dplyr)
+
+fulldata5 <- fulldata5 |> 
+  rename(
+    Modstandertype = `Modstander Type`,
+    Tidpaadagen = `Tid på dagen`
+  )
+
 ```
 
 In order to model the data I will make training data and test data.
@@ -1047,7 +1059,7 @@ dim(fulldata4)
 
 
 set.seed(5)
-train <- sample(c(TRUE, FALSE), nrow(fulldata4), replace = TRUE)
+train <- sample(c(TRUE, FALSE), nrow(fulldata5), replace = TRUE)
 
 
 # På den måde fordeles observationerne i Hitters til enten et 
@@ -1061,14 +1073,14 @@ test <- (!train)
 train
 test
 
-fulldata4[train,]
-fulldata4[test,]
+fulldata5[train,]
+fulldata5[test,]
 
 
 
 ```
 
-After this the model is fitted to training data using linear multiple regression, and this is the coeeficients of out model.
+After this the model is fitted to training data using linear multiple regression, and this is the coeeficients of the model.
 
 ```{r}
 #| echo: false
@@ -1120,7 +1132,7 @@ print(outlier_data)
 
 ### Evaluation
 
-I will now test the model on new data, the testdata. Validation method used is 5-fold CV due to the balance between bias and variance.
+I will now test the model on new data, the testdata. Validation method used is 5-fold CV due to the balance between bias and variance. After this the MSE will be calculated
 
 ```{r}
 
@@ -1130,11 +1142,15 @@ predicted_values <- predict(lm.fit1, newdata = fulldata5[test, ])
 velovervejede.mse <- mean((fulldata5[test,]$Tilskuere - predicted_values)^2)
 
 
-
-
 velovervejede.mse
 ```
 
 
 
 ### Implementation
+
+The prediction has been transformed into a Shiny app that can be implemented in the VFF system.
+
+#Conclusion
+
+The mode requires more work. The model is build only on publicly available data. In order to improve the prediction for more useful results it the model should be updated with intern data. this could be variables such as markting data, events in the local society, ticket prices etc.
