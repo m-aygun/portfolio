@@ -13,6 +13,11 @@ format:
     toc: true
     toc-expand: 3
     number-sections: true
+  pdf:
+    theme: flatly
+    toc: true
+    number-sections: true
+    
 editor: source
 ---
 
