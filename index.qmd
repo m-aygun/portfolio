@@ -11,6 +11,7 @@ format:
     theme: flatly
     code-fold: true
     toc: true
+    toc-expand: 3
     number-sections: true
   pdf:
     theme: flatly
@@ -1048,14 +1049,14 @@ In order to model the data I will make training data and test data.
 #| results: true
 #| output: false
 
-dim(fulldata4)
+dim(fulldata5)
 
 # Laver en logist vektor, hvis length er lig med antallet af 
 # observationer i fulldata (235). sample-funktionen genererer 
 # tilfældige TRUE og FALSE værdier. Der genereres cirka lige 
 # mange TRUE og FALSE - værdier:
 
-# Bemærk at nrow(fulldata2) = 237
+# Bemærk at nrow(fulldata2) = 231
 
 
 set.seed(5)
@@ -1145,12 +1146,10 @@ velovervejede.mse <- mean((fulldata5[test,]$Tilskuere - predicted_values)^2)
 velovervejede.mse
 ```
 
-
-
 ### Implementation
 
-The prediction has been transformed into a Shiny app that can be implemented in the VFF system.
+The prediction has been transformed into a Shiny app that can be implemented in the VFF system. The app can be seen [here.](https://mettej.shinyapps.io/portefolio/)
 
-#Conclusion
+# Conclusion
 
 The mode requires more work. The model is build only on publicly available data. In order to improve the prediction for more useful results it the model should be updated with intern data. this could be variables such as markting data, events in the local society, ticket prices etc.
