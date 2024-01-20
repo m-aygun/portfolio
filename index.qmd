@@ -17,8 +17,6 @@ format:
     theme: flatly
     toc: true
     number-sections: true
-    
-editor: source
 ---
 
 # Introduction
