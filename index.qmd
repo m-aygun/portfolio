@@ -19,6 +19,8 @@ format:
     number-sections: true
 ---
 
+![Prediction](images/DALL·E 2024-01-20 08.21.21 - Create an image of a soccer player in a dynamic pose, looking upwards towards a soccer ball suspended in the air. The player is surrounded by futurist.png){fig-alt="Prediction" fig-align="center"}
+
 # Introduction
 
 In the dynamic world of sports, the ability to anticipate game attendance is crucial for effective stadium management, marketing strategies, and fan engagement. This project presents a comprehensive prediction model specifically designed for estimating the number of viewers attending home games of Viborg FF, a prominent Danish soccer club. By leveraging data-driven approaches and advanced analytical techniques, the model aims to provide accurate forecasts that can assist in optimizing the overall matchday experience.
@@ -934,7 +936,7 @@ First we remove the timeperiod where VFF was restricted by corona. After this we
 #| echo: true
 #| code-fold: true
 #| warning: false
-#| results: true
+#| result: true
 
 start_dato <- as.Date("2020-03-07")
 slut_dato <- as.Date("2021-04-16")
@@ -958,15 +960,65 @@ After importing the data the data has been cleaned and quantitative and qualitat
 
 ### Modeling
 
-## Explorative analysis
+#### Explorative analysis
 
-In order to determin the significance of the qualitative variables I perform a corelationanalysis using a corelation heatmap. I wish to determine if there is any correlation bwtween the quantitative variables and Y (Tilskuere)
+Dividing the dataset into a training set and a separate test set. The training set is used for model training and cross-validation, while the test set is used to evaluate the model's performance on unknown data.
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| warning: false
+#| result: true
+
+
+x <- model.matrix(Tilskuere ~ ., sl_klar)[, -1]
+y <- sl_klar$Tilskuere
+
+set.seed(123)
+train <- sample(1:nrow(x), nrow(x)*2/3)
+test <- (-train)
+y.test <- y[test]
+```
+
+**Lasso**
+
+Choosing Optimal Lambda (or Alpha):
+For each combination of lambda values (both for Lasso and Ridge), the model is trained on k-1 folds and validated on the remaining fold. The average MSE across all folds for each lambda value is calculated.
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| warning: false
+#| result: true
+
+
+grid <- 10^seq(2, -1, length = 100)
+lasso.mod <- glmnet(x[train, ], y[train], alpha = 1,
+                    lambda = grid, thresh = 1e-12)
+
+
+set.seed(123)
+cv.out <- cv.glmnet(x[train, ], y[train], alpha = 1, 
+                    nfolds =10, lambda = grid)
+
+cv.out
+plot(cv.out)
+bestlam <- cv.out$lambda.min
+bestlam_1se <- cv.out$lambda.1se
+
+lasso.pred <- predict(lasso.mod, s = bestlam, newx = x[test, ]) 
+mse_lasso <- mean((lasso.pred - y.test)^2)
+```
+
+Linear regression
+
+In order to determin the significance of the qualitative variables I perform a corelationanalysis using a corelation heatmap. I wish to determine if there is any correlation between the quantitative variables and Y (Tilskuere)
 
 ```{r}
 #| echo: false
 #| code-fold: true
 #| warning: false
-#| results: true
+#| result: true
 
 cor_matrix <- cor(sl_klar[,c("Tilskuere", "Temperatur", "Vindhastighed", 
                                "Fugtighed", "Synlighed", "Nedbør sidste time", 
@@ -996,7 +1048,7 @@ Here we can determin that there is a correlation between Indbyggertal and Synlig
 
 ```{r}
 #| echo: true
-#| results: false
+#| result: false
 #| execute: false
 #| warning: false
 
@@ -1018,7 +1070,7 @@ I will now check the significance of each variable. Here we can se that the sign
 #| echo: false
 #| code-fold: true
 #| warning: false
-#| results: true
+#| result: true
 
 
 lm.fit <- lm(Tilskuere ~ ., data = fulldata4)
@@ -1037,104 +1089,7 @@ fulldata5 <- fulldata5 |>
     Tidpaadagen = `Tid på dagen`
   )
 
-```
 
-In order to model the data I will make training data and test data.
-
-```{r}
-#| echo: false
-#| code-fold: true
-#| warning: false
-#| results: true
-#| output: false
-
-dim(fulldata5)
-
-# Laver en logist vektor, hvis length er lig med antallet af 
-# observationer i fulldata (235). sample-funktionen genererer 
-# tilfældige TRUE og FALSE værdier. Der genereres cirka lige 
-# mange TRUE og FALSE - værdier:
-
-# Bemærk at nrow(fulldata2) = 231
-
-
-set.seed(5)
-train <- sample(c(TRUE, FALSE), nrow(fulldata5), replace = TRUE)
-
-
-# På den måde fordeles observationerne i Hitters til enten et 
-# træningssæt (TRUE) eller til et testsæt (FALSE):
-
-# Det modsatte af train er !train og dermed dannes testsættet:
-test <- (!train)
-
-# Bemærk at de er gensidig udelukkende:
-
-train
-test
-
-fulldata5[train,]
-fulldata5[test,]
-
-
-
-```
-
-After this the model is fitted to training data using linear multiple regression, and this is the coeeficients of the model.
-
-```{r}
-#| echo: false
-#| code-fold: true
-#| warning: false
-#| results: true
-
-lm.fit1 <- lm(Tilskuere ~ ., data = fulldata5[train, ])
-
-lm.fit1
-
-summary(lm.fit1)
-
-```
-
-After this I am checking for outliers using studentized residuals.
-
-```{r}
-#| echo: false
-#| code-fold: true
-#| warning: false
-#| results: true
-
-residuals <- residuals(lm.fit1)
-
-# Beregn standardfejl for residuals (R's default er studentized residuals)
-residuals_se <- sqrt(sum(residuals^2) / (length(residuals) - 2))
-
-# Beregn studentized residuals
-studentized_residuals <- residuals / residuals_se
-
-# Opret et scatterplot af studentized residuals
-ggplot(data = NULL, aes(x = seq_along(studentized_residuals), y = studentized_residuals)) +
-  geom_point() +
-  labs(x = "Observationer", y = "Studentized Residuals") +
-  ggtitle("Scatterplot af Studentized Residuals")
-
-# Find outliers (|studentized_residuals| > 3)
-outliers <- abs(studentized_residuals) > 2 | abs(studentized_residuals) < -2
-
-# Udskriv de outliers
-outlier_indices <- which(outliers)
-outlier_values <- studentized_residuals[outliers]
-
-outlier_data <- data.frame(Outlier_Index = outlier_indices, Studentized_Residual = outlier_values)
-print(outlier_data)
-
-```
-
-### Evaluation
-
-I will now test the model on new data, the testdata. Validation method used is 5-fold CV due to the balance between bias and variance. After this the MSE will be calculated
-
-```{r}
 
 #the model is tested on new data.
 
@@ -1145,10 +1100,19 @@ velovervejede.mse <- mean((fulldata5[test,]$Tilskuere - predicted_values)^2)
 velovervejede.mse
 ```
 
+### Evaluation
+
+The best performing model is here shown as the linear regression, since ethe MSE is lowest. o I am choosing to continue with this model.
+
+```{r}
+velovervejede.mse
+mse_lasso
+```
+
 ### Implementation
 
 The prediction has been transformed into a Shiny app that can be implemented in the VFF system. The app can be seen [here.](https://mettej.shinyapps.io/portefolio/)
 
 # Conclusion
 
-The mode requires more work. The model is build only on publicly available data. In order to improve the prediction for more useful results it the model should be updated with intern data. this could be variables such as markting data, events in the local society, ticket prices etc.
+The model requires more work. The model is build only on publicly available data. In order to improve the prediction for more useful results the model should be updated with internal data. This could be variables such as markting data, events in the local society, ticket prices etc.
