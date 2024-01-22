@@ -19,6 +19,8 @@ format:
     number-sections: true
 ---
 
+
+
 ![Soccerplayer data](DALL·E 2024-01-20 08.21.21 - Create an image of a soccer player in a dynamic pose, looking upwards towards a soccer ball suspended in the air. The player is surrounded by futurist.png){fig-alt="Soccerplayer data"}
 
 # Introduction
@@ -37,6 +39,8 @@ The project embarked on developing a predictive model for estimating the attenda
 
 ## Reading libraries
 
+
+
 ```{r}
 #| echo: true
 #| results: false
@@ -53,9 +57,13 @@ pacman::p_load("rvest", "purrr", "data.table", "stringr", "tidyr", "zoo",
 
 ```
 
+
+
 ## Importing data
 
 Data is imported by API-call and webscrabing. All the data is publicly available. Data is imported from DMI, DST, kalender365.dk and www.superstats.dk. By the end dataset are merged and cleaned in order to do the statistical analysis. Different variables are added in order to perform explorative analysis.
+
+
 
 ```{r}
 #| echo: true
@@ -909,7 +917,11 @@ sl_klar <- fulldata
 
 ```
 
+
+
 This creates a dataset with 542 observations, that we can investigate
+
+
 
 ```{r}
 #vi skaber en interaktiv tabel
@@ -919,6 +931,8 @@ datatable(sl_klar, caption = htmltools::tags$caption(
     'Table 1: ', htmltools::em('Viborg FF kampe since 2007 '))
     )
 ```
+
+
 
 ## CRISP-DM metodology
 
@@ -931,6 +945,8 @@ Viborg FF wishes to predict the number of spectators attending their home games.
 ### Data Understanding
 
 First we remove the timeperiod where VFF was restricted by corona. After this we filter the dataset so its only showing the VFF homegames and remove all the irellevant columns.
+
+
 
 ```{r}
 #| echo: true
@@ -954,6 +970,8 @@ sl_klar = sl_klar %>%
   dplyr::select(-ID, -Dato, -Tid,- Hjemmehold, -Udehold, -Hjemmeholdsmål, -Udeholdsmål, -Ugedag)
 ```
 
+
+
 ### Data Preparation
 
 After importing the data the data has been cleaned and quantitative and qualitative variabels has been created
@@ -963,6 +981,8 @@ After importing the data the data has been cleaned and quantitative and qualitat
 #### Explorative analysis
 
 Dividing the dataset into a training set and a separate test set. The training set is used for model training and cross-validation, while the test set is used to evaluate the model's performance on unknown data.
+
+
 
 ```{r}
 #| echo: true
@@ -980,10 +1000,14 @@ test <- (-train)
 y.test <- y[test]
 ```
 
+
+
 **Lasso**
 
 Choosing Optimal Lambda (or Alpha):
 For each combination of lambda values (both for Lasso and Ridge), the model is trained on k-1 folds and validated on the remaining fold. The average MSE across all folds for each lambda value is calculated.
+
+
 
 ```{r}
 #| echo: true
@@ -1010,9 +1034,13 @@ lasso.pred <- predict(lasso.mod, s = bestlam, newx = x[test, ])
 mse_lasso <- mean((lasso.pred - y.test)^2)
 ```
 
+
+
 **Linear regression**
 
 In order to determin the significance of the qualitative variables I perform a corelationanalysis using a corelation heatmap. I wish to determine if there is any correlation between the quantitative variables and Y (Tilskuere)
+
+
 
 ```{r}
 #| echo: false
@@ -1044,7 +1072,11 @@ ggpairs(sl_klar[, c("Tilskuere", "Temperatur", "Vindhastighed",
 
 ```
 
+
+
 Here we can determin that there is a correlation between Indbyggertal and Synlighed. Therefore we will now check for correlation between these two variables. I am filtering out the non relevant variables as well.
+
+
 
 ```{r}
 #| echo: true
@@ -1064,7 +1096,11 @@ fulldata4 <- sl_klar %>%
   dplyr::select(-Fugtighed, -Vindhastighed, -`Nedbør sidste time`, -`Fugtighed den sidste time`, -Temperatur)
 ```
 
+
+
 I will now check the significance of each variable. Here we can se that the significant variables are: Superliga, ferie, Dagtype, Tid på dagen og Synlighed, and I chose to continue with these.
+
+
 
 ```{r}
 #| echo: false
@@ -1107,14 +1143,20 @@ mse_lin <- mean((fulldata5[test,]$Tilskuere - predicted_values)^2)
 mse_lin
 ```
 
+
+
 ### Evaluation
 
 The best performing model is here shown as the linear regression, since the MSE is lowest so I am choosing to continue with this model.
+
+
 
 ```{r}
 mse_lin
 mse_lasso
 ```
+
+
 
 ### Implementation
 
@@ -1123,3 +1165,4 @@ The prediction has been transformed into a Shiny app that can be implemented in 
 # Conclusion
 
 The model requires more work. The model is build only on publicly available data. In order to improve the prediction for more useful results the model should be updated with internal data. This could be variables such as markting data, events in the local society, ticket prices etc.
+
