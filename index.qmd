@@ -13,13 +13,12 @@ format:
     toc: true
     toc-expand: 3
     number-sections: true
-  pdf:
-    theme: flatly
+  pdf:fd<az    theme: flatly
     toc: true
     number-sections: true
 ---
 
-![Prediction](images/DALL·E 2024-01-20 08.21.21 - Create an image of a soccer player in a dynamic pose, looking upwards towards a soccer ball suspended in the air. The player is surrounded by futurist.png){fig-alt="Prediction" fig-align="center"}
+![Soccerplayer data](DALL·E 2024-01-20 08.21.21 - Create an image of a soccer player in a dynamic pose, looking upwards towards a soccer ball suspended in the air. The player is surrounded by futurist.png){fig-alt="Soccerplayer data"}
 
 # Introduction
 
@@ -49,6 +48,10 @@ pacman::p_load("rvest", "purrr", "data.table", "stringr", "tidyr", "zoo",
                "splines", "ISLR2", "MASS", "testthat", "leaps", "caret",
                "RSQLite", "class", "nasaweather",
                "fueleconomy", "viridis", "boot", "glmnet", "pls", "tidyverse", "GGally", "reshape2", "ggplot2", "dplyr","corrplot")
+install.packages("webshot2")
+#install.packages("webshot")
+#webshot::install_phantomjs()
+
 
 ```
 
@@ -925,7 +928,6 @@ The Cross-Industry Standard Process for Data Mining (CRISP-DM) offers a systemat
 
 ### Business understanding
 
-\
 Viborg FF wishes to predict the number of spectators attending their home games. This is valuable for all departments, but especially the commercial department can benefit from this. Among other things, this can enable them to better plan marketing efforts, purchases, and work schedules.
 
 ### Data Understanding
@@ -1010,7 +1012,7 @@ lasso.pred <- predict(lasso.mod, s = bestlam, newx = x[test, ])
 mse_lasso <- mean((lasso.pred - y.test)^2)
 ```
 
-Linear regression
+**Linear regression**
 
 In order to determin the significance of the qualitative variables I perform a corelationanalysis using a corelation heatmap. I wish to determine if there is any correlation between the quantitative variables and Y (Tilskuere)
 
