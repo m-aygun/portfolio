@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.547">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.4.547" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-
-<meta name="author" content="Mette" />
-<meta name="dcterms.date" content="2024-01-22" />
-<meta name="description" content="Prediction of viewers for VFF homegames" />
+<meta name="author" content="Mette">
+<meta name="dcterms.date" content="2024-01-22">
+<meta name="description" content="Prediction of viewers for VFF homegames">
 
 <title>Portefolio</title>
 <style>
@@ -61,15 +59,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="index_files/libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-<link href="index_files/libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<link href="index_files/libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
 <script src="index_files/libs/datatables-binding-0.30/datatables.js"></script>
 <script src="index_files/libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="index_files/libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
-<link href="index_files/libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<link href="index_files/libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="index_files/libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet">
 <script src="index_files/libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
-<link href="index_files/libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+<link href="index_files/libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
 <script src="index_files/libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
 
 
@@ -77,15 +85,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <div id="quarto-toc-target"></div>
-</div>
-<main class="content" id="quarto-document-content">
-
-
-<header id="title-block-header" class="quarto-title-block default">
-  <div class="quarto-title-banner">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Portefolio</h1>
                   <div>
@@ -124,33 +125,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
     
   
-  </header>
-
-<nav id="TOC" role="doc-toc">
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="3">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#analysis" id="toc-analysis"><span class="header-section-number">2</span> Analysis</a>
-  <ul>
-  <li><a href="#reading-libraries" id="toc-reading-libraries"><span class="header-section-number">2.1</span> Reading libraries</a></li>
-  <li><a href="#importing-data" id="toc-importing-data"><span class="header-section-number">2.2</span> Importing data</a></li>
-  <li><a href="#crisp-dm-metodology" id="toc-crisp-dm-metodology"><span class="header-section-number">2.3</span> CRISP-DM metodology</a>
-  <ul>
-  <li><a href="#business-understanding" id="toc-business-understanding"><span class="header-section-number">2.3.1</span> Business understanding</a></li>
-  <li><a href="#data-understanding" id="toc-data-understanding"><span class="header-section-number">2.3.2</span> Data Understanding</a></li>
-  <li><a href="#data-preparation" id="toc-data-preparation"><span class="header-section-number">2.3.3</span> Data Preparation</a></li>
-  <li><a href="#modeling" id="toc-modeling"><span class="header-section-number">2.3.4</span> Modeling</a></li>
-  <li><a href="#evaluation" id="toc-evaluation"><span class="header-section-number">2.3.5</span> Evaluation</a></li>
-  <li><a href="#implementation" id="toc-implementation"><span class="header-section-number">2.3.6</span> Implementation</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#analysis" id="toc-analysis" class="nav-link" data-scroll-target="#analysis"><span class="header-section-number">2</span> Analysis</a>
+  <ul class="collapse">
+  <li><a href="#reading-libraries" id="toc-reading-libraries" class="nav-link" data-scroll-target="#reading-libraries"><span class="header-section-number">2.1</span> Reading libraries</a></li>
+  <li><a href="#importing-data" id="toc-importing-data" class="nav-link" data-scroll-target="#importing-data"><span class="header-section-number">2.2</span> Importing data</a></li>
+  <li><a href="#crisp-dm-metodology" id="toc-crisp-dm-metodology" class="nav-link" data-scroll-target="#crisp-dm-metodology"><span class="header-section-number">2.3</span> CRISP-DM metodology</a>
+  <ul class="collapse">
+  <li><a href="#business-understanding" id="toc-business-understanding" class="nav-link" data-scroll-target="#business-understanding"><span class="header-section-number">2.3.1</span> Business understanding</a></li>
+  <li><a href="#data-understanding" id="toc-data-understanding" class="nav-link" data-scroll-target="#data-understanding"><span class="header-section-number">2.3.2</span> Data Understanding</a></li>
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation"><span class="header-section-number">2.3.3</span> Data Preparation</a></li>
+  <li><a href="#modeling" id="toc-modeling" class="nav-link" data-scroll-target="#modeling"><span class="header-section-number">2.3.4</span> Modeling</a></li>
+  <li><a href="#evaluation" id="toc-evaluation" class="nav-link" data-scroll-target="#evaluation"><span class="header-section-number">2.3.5</span> Evaluation</a></li>
+  <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation"><span class="header-section-number">2.3.6</span> Implementation</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#conclusion" id="toc-conclusion"><span class="header-section-number">3</span> Conclusion</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><span class="header-section-number">3</span> Conclusion</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
 <div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img src="DALL·E%202024-01-20%2008.21.21%20-%20Create%20an%20image%20of%20a%20soccer%20player%20in%20a%20dynamic%20pose,%20looking%20upwards%20towards%20a%20soccer%20ball%20suspended%20in%20the%20air.%20The%20player%20is%20surrounded%20by%20futurist.png" class="img-fluid" alt="Soccerplayer data" /></p>
+<figure class="figure">
+<p><img src="DALL·E%202024-01-20%2008.21.21%20-%20Create%20an%20image%20of%20a%20soccer%20player%20in%20a%20dynamic%20pose,%20looking%20upwards%20towards%20a%20soccer%20ball%20suspended%20in%20the%20air.%20The%20player%20is%20surrounded%20by%20futurist.png" class="img-fluid figure-img" alt="Soccerplayer data"></p>
 <figcaption>Soccerplayer data</figcaption>
 </figure>
 </div>
@@ -165,29 +173,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 data-number="2"><span class="header-section-number">2</span> Analysis</h1>
 <p>The project embarked on developing a predictive model for estimating the attendance at Viborg FF home games with a structured and methodical approach. The initial stage involved importing data through API calls and web scraping, a technique that proved essential in gathering a diverse range of public data. This included team performance statistics, league standing, TV channels, weather conditions, and details of special events.</p>
 <section id="reading-libraries" class="level2" data-number="2.1">
-<h2 data-number="2.1"><span class="header-section-number">2.1</span> Reading libraries</h2>
+<h2 data-number="2.1" class="anchored" data-anchor-id="reading-libraries"><span class="header-section-number">2.1</span> Reading libraries</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(<span class="st">&quot;rvest&quot;</span>, <span class="st">&quot;purrr&quot;</span>, <span class="st">&quot;data.table&quot;</span>, <span class="st">&quot;stringr&quot;</span>, <span class="st">&quot;tidyr&quot;</span>, <span class="st">&quot;zoo&quot;</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;DT&quot;</span>, <span class="st">&quot;janitor&quot;</span>, <span class="st">&quot;chron&quot;</span>, <span class="st">&quot;rlist&quot;</span>, <span class="st">&quot;rjstat&quot;</span>, </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;rjson&quot;</span>, <span class="st">&quot;Rcrawler&quot;</span>, <span class="st">&quot;magrittr&quot;</span>, <span class="st">&quot;gapminder&quot;</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;Lahman&quot;</span>, <span class="st">&quot;maps&quot;</span>, <span class="st">&quot;lubridate&quot;</span>, <span class="st">&quot;pryr&quot;</span>, <span class="st">&quot;hms&quot;</span>, <span class="st">&quot;hexbin&quot;</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;feather&quot;</span>, <span class="st">&quot;htmlwidgets&quot;</span>, <span class="st">&quot;broom&quot;</span>, <span class="st">&quot;pander&quot;</span>, <span class="st">&quot;modelr&quot;</span>,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;XML&quot;</span>, <span class="st">&quot;httr&quot;</span>, <span class="st">&quot;jsonlite&quot;</span>, <span class="st">&quot;microbenchmark&quot;</span>,</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;splines&quot;</span>, <span class="st">&quot;ISLR2&quot;</span>, <span class="st">&quot;MASS&quot;</span>, <span class="st">&quot;testthat&quot;</span>, <span class="st">&quot;leaps&quot;</span>, <span class="st">&quot;caret&quot;</span>,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;RSQLite&quot;</span>, <span class="st">&quot;class&quot;</span>, <span class="st">&quot;nasaweather&quot;</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>               <span class="st">&quot;fueleconomy&quot;</span>, <span class="st">&quot;viridis&quot;</span>, <span class="st">&quot;boot&quot;</span>, <span class="st">&quot;glmnet&quot;</span>, <span class="st">&quot;pls&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;GGally&quot;</span>, <span class="st">&quot;reshape2&quot;</span>, <span class="st">&quot;ggplot2&quot;</span>, <span class="st">&quot;dplyr&quot;</span>,<span class="st">&quot;corrplot&quot;</span>)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pacman<span class="sc">::</span><span class="fu">p_load</span>(<span class="st">"rvest"</span>, <span class="st">"purrr"</span>, <span class="st">"data.table"</span>, <span class="st">"stringr"</span>, <span class="st">"tidyr"</span>, <span class="st">"zoo"</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">"DT"</span>, <span class="st">"janitor"</span>, <span class="st">"chron"</span>, <span class="st">"rlist"</span>, <span class="st">"rjstat"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">"rjson"</span>, <span class="st">"Rcrawler"</span>, <span class="st">"magrittr"</span>, <span class="st">"gapminder"</span>,</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>               <span class="st">"Lahman"</span>, <span class="st">"maps"</span>, <span class="st">"lubridate"</span>, <span class="st">"pryr"</span>, <span class="st">"hms"</span>, <span class="st">"hexbin"</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>               <span class="st">"feather"</span>, <span class="st">"htmlwidgets"</span>, <span class="st">"broom"</span>, <span class="st">"pander"</span>, <span class="st">"modelr"</span>,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>               <span class="st">"XML"</span>, <span class="st">"httr"</span>, <span class="st">"jsonlite"</span>, <span class="st">"microbenchmark"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>               <span class="st">"splines"</span>, <span class="st">"ISLR2"</span>, <span class="st">"MASS"</span>, <span class="st">"testthat"</span>, <span class="st">"leaps"</span>, <span class="st">"caret"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>               <span class="st">"RSQLite"</span>, <span class="st">"class"</span>, <span class="st">"nasaweather"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>               <span class="st">"fueleconomy"</span>, <span class="st">"viridis"</span>, <span class="st">"boot"</span>, <span class="st">"glmnet"</span>, <span class="st">"pls"</span>, <span class="st">"tidyverse"</span>, <span class="st">"GGally"</span>, <span class="st">"reshape2"</span>, <span class="st">"ggplot2"</span>, <span class="st">"dplyr"</span>,<span class="st">"corrplot"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 <section id="importing-data" class="level2" data-number="2.2">
-<h2 data-number="2.2"><span class="header-section-number">2.2</span> Importing data</h2>
+<h2 data-number="2.2" class="anchored" data-anchor-id="importing-data"><span class="header-section-number">2.2</span> Importing data</h2>
 <p>Data is imported by API-call and webscrabing. All the data is publicly available. Data is imported from DMI, DST, kalender365.dk and www.superstats.dk. By the end dataset are merged and cleaned in order to do the statistical analysis. Different variables are added in order to perform explorative analysis.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Vi starter med at hente  tabeller for superligaen, alle sæsoner mellem 2007/2008 - 2023/2024</span></span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Vi starter med at hente  tabeller for superligaen, alle sæsoner mellem 2007/2008 - 2023/2024</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Superliga kampprogram for sæson 2007/2008 - 2023/2024 -------------------</span></span>
@@ -204,13 +212,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  table <span class="ot">&lt;-</span> <span class="fu">html_table</span>(page, <span class="at">fill =</span> <span class="cn">TRUE</span>, <span class="at">convert =</span> <span class="cn">FALSE</span>)[[table_number]]</span>
 <span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Giv kolonnerne de ønskede navne</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Ugedag&quot;</span>, <span class="st">&quot;Dato&quot;</span>, <span class="st">&quot;Hold&quot;</span>, <span class="st">&quot;Score&quot;</span>, <span class="st">&quot;Tilskuere&quot;</span>, <span class="st">&quot;Dommer&quot;</span>, <span class="st">&quot;Ekstra&quot;</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">colnames</span>(table) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Ugedag"</span>, <span class="st">"Dato"</span>, <span class="st">"Hold"</span>, <span class="st">"Score"</span>, <span class="st">"Tilskuere"</span>, <span class="st">"Dommer"</span>, <span class="st">"Ekstra"</span>)</span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Tilføj en ny kolonne &#39;Runde&#39; med værdien svarende til tabelnummeret</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Tilføj en ny kolonne 'Runde' med værdien svarende til tabelnummeret</span></span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  table<span class="sc">$</span>Runde <span class="ot">&lt;-</span> table_number</span>
 <span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Udtræk sæsonsværdien fra URL&#39;en og tilføj en sæsonkolonne</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  table<span class="sc">$</span>Sæson <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(url, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d{4}%2F</span><span class="sc">\\</span><span class="st">d{4}&quot;</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Udtræk sæsonsværdien fra URL'en og tilføj en sæsonkolonne</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  table<span class="sc">$</span>Sæson <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(url, <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}%2F</span><span class="sc">\\</span><span class="st">d{4}"</span>)</span>
 <span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>  table<span class="sc">$</span>Ugedag <span class="ot">&lt;-</span> <span class="fu">as.character</span>(table<span class="sc">$</span>Ugedag)</span>
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>  </span>
@@ -223,20 +231,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Tom liste til at gemme resultater fra hver sæson</span></span>
 <span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>seasons_results <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
 <span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion til at finde antallet af tabeller, der indeholder &quot;Runde&quot;</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion til at finde antallet af tabeller, der indeholder "Runde"</span></span>
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>find_number_of_round_tables <span class="ot">&lt;-</span> <span class="cf">function</span>(url) {</span>
 <span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>  page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url)</span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  tables <span class="ot">&lt;-</span> <span class="fu">html_nodes</span>(page, <span class="st">&quot;table&quot;</span>)</span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  round_tables <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">str_detect</span>(<span class="fu">html_text</span>(tables), <span class="st">&quot;Runde|runde&quot;</span>))</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>  tables <span class="ot">&lt;-</span> <span class="fu">html_nodes</span>(page, <span class="st">"table"</span>)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>  round_tables <span class="ot">&lt;-</span> <span class="fu">which</span>(<span class="fu">str_detect</span>(<span class="fu">html_text</span>(tables), <span class="st">"Runde|runde"</span>))</span>
 <span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(round_tables)</span>
 <span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop over sæsoner</span></span>
 <span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (season <span class="cf">in</span> seasons) {</span>
-<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Angiv URL&#39;en for den aktuelle sæson</span></span>
-<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://superstats.dk/program?aar=&quot;</span>, season, <span class="st">&quot;%2F&quot;</span>, season <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Angiv URL'en for den aktuelle sæson</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"https://superstats.dk/program?aar="</span>, season, <span class="st">"%2F"</span>, season <span class="sc">+</span> <span class="dv">1</span>)</span>
 <span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Find tabeller, der indeholder &quot;Runde&quot;</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Find tabeller, der indeholder "Runde"</span></span>
 <span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>  round_tables <span class="ot">&lt;-</span> <span class="fu">find_number_of_round_tables</span>(url)</span>
 <span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Loop over de fundne tabeller og gem resultaterne i en liste</span></span>
@@ -245,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Bind tablerne sammen i en enkelt data frame</span></span>
 <span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>  season_result_df <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(tables_list)</span>
 <span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fjern kolonne &#39;Ekstra&#39;</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fjern kolonne 'Ekstra'</span></span>
 <span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>  season_result_df <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">select</span>(season_result_df, <span class="sc">-</span>Ekstra)</span>
 <span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Gem resultatet for denne sæson i den overordnede liste</span></span>
@@ -257,7 +265,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstat %2F med / i Sæson</span></span>
 <span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>final_season_result <span class="ot">&lt;-</span> final_season_result <span class="sc">%&gt;%</span></span>
-<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(Sæson <span class="ot">=</span> <span class="fu">str_replace</span>(Sæson, <span class="st">&quot;%2F&quot;</span>, <span class="st">&quot;/&quot;</span>))</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(Sæson <span class="ot">=</span> <span class="fu">str_replace</span>(Sæson, <span class="st">"%2F"</span>, <span class="st">"/"</span>))</span>
 <span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>allesasoner <span class="ot">&lt;-</span> final_season_result</span>
 <span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a></span>
@@ -266,7 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="co"># URL til websiden</span></span>
-<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>url1 <span class="ot">&lt;-</span> <span class="st">&quot;https://superstats.dk/program&quot;</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>url1 <span class="ot">&lt;-</span> <span class="st">"https://superstats.dk/program"</span></span>
 <span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="co"># Hent websidens indhold</span></span>
 <span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>page <span class="ot">&lt;-</span> <span class="fu">GET</span>(url1)</span>
@@ -274,11 +282,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="co"># Parse HTML indholdet</span></span>
 <span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>page_content <span class="ot">&lt;-</span> <span class="fu">read_html</span>(page)</span>
 <span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="co"># Find alle &lt;th&gt; elementer med klassen &quot;leftalign&quot;, der indeholder &quot;Runde&quot;</span></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="co"># Find alle &lt;th&gt; elementer med klassen "leftalign", der indeholder "Runde"</span></span>
 <span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>runde_navne <span class="ot">&lt;-</span> page_content <span class="sc">%&gt;%</span></span>
-<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">&quot;th.leftalign&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_nodes</span>(<span class="st">"th.leftalign"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a>  <span class="fu">html_text</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>  .[<span class="fu">str_detect</span>(., <span class="st">&quot;Runde&quot;</span>)]</span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a>  .[<span class="fu">str_detect</span>(., <span class="st">"Runde"</span>)]</span>
 <span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="co"># Find alle tabeller i HTML indholdet</span></span>
 <span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>tables <span class="ot">&lt;-</span> <span class="fu">html_table</span>(page_content, <span class="at">fill =</span> <span class="cn">TRUE</span>, <span class="at">convert =</span> <span class="cn">FALSE</span>)</span>
@@ -291,26 +299,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">ncol</span>(tables[[i]]) <span class="sc">&gt;=</span> <span class="dv">6</span> <span class="sc">&amp;&amp;</span> i <span class="sc">&lt;=</span> <span class="fu">length</span>(runde_navne)) {</span>
 <span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Tjek antallet af kolonner og tilføj et ekstra kolonnenavn, hvis det er nødvendigt</span></span>
 <span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">ncol</span>(tables[[i]]) <span class="sc">&gt;</span> <span class="dv">6</span>) {</span>
-<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>      <span class="fu">colnames</span>(tables[[i]]) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Ugedag&quot;</span>, <span class="st">&quot;Dato&quot;</span>, <span class="st">&quot;Hold&quot;</span>, <span class="st">&quot;Score&quot;</span>, <span class="st">&quot;Tilskuere&quot;</span>, <span class="st">&quot;Dommer&quot;</span>, <span class="fu">paste</span>(<span class="st">&quot;Ekstra&quot;</span>, <span class="dv">1</span><span class="sc">:</span>(<span class="fu">ncol</span>(tables[[i]]) <span class="sc">-</span> <span class="dv">6</span>)))</span>
+<span id="cb2-105"><a href="#cb2-105" aria-hidden="true" tabindex="-1"></a>      <span class="fu">colnames</span>(tables[[i]]) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Ugedag"</span>, <span class="st">"Dato"</span>, <span class="st">"Hold"</span>, <span class="st">"Score"</span>, <span class="st">"Tilskuere"</span>, <span class="st">"Dommer"</span>, <span class="fu">paste</span>(<span class="st">"Ekstra"</span>, <span class="dv">1</span><span class="sc">:</span>(<span class="fu">ncol</span>(tables[[i]]) <span class="sc">-</span> <span class="dv">6</span>)))</span>
 <span id="cb2-106"><a href="#cb2-106" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>      <span class="fu">colnames</span>(tables[[i]]) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Ugedag&quot;</span>, <span class="st">&quot;Dato&quot;</span>, <span class="st">&quot;Hold&quot;</span>, <span class="st">&quot;Score&quot;</span>, <span class="st">&quot;Tilskuere&quot;</span>, <span class="st">&quot;Dommer&quot;</span>)</span>
+<span id="cb2-107"><a href="#cb2-107" aria-hidden="true" tabindex="-1"></a>      <span class="fu">colnames</span>(tables[[i]]) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Ugedag"</span>, <span class="st">"Dato"</span>, <span class="st">"Hold"</span>, <span class="st">"Score"</span>, <span class="st">"Tilskuere"</span>, <span class="st">"Dommer"</span>)</span>
 <span id="cb2-108"><a href="#cb2-108" aria-hidden="true" tabindex="-1"></a>    }</span>
 <span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-110"><a href="#cb2-110" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-111"><a href="#cb2-111" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Udtræk runde nummeret fra teksten</span></span>
-<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>    runde_nummer <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(runde_navne[i], <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d+&quot;</span>)</span>
+<span id="cb2-112"><a href="#cb2-112" aria-hidden="true" tabindex="-1"></a>    runde_nummer <span class="ot">&lt;-</span> <span class="fu">str_extract</span>(runde_navne[i], <span class="st">"</span><span class="sc">\\</span><span class="st">d+"</span>)</span>
 <span id="cb2-113"><a href="#cb2-113" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-114"><a href="#cb2-114" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Tilføj runde nummeret som en kolonne</span></span>
 <span id="cb2-115"><a href="#cb2-115" aria-hidden="true" tabindex="-1"></a>    tables[[i]]<span class="sc">$</span>Runde <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(runde_nummer)</span>
 <span id="cb2-116"><a href="#cb2-116" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Tilføj &#39;Sæson&#39; kolonne med værdien &#39;2023/2024&#39;</span></span>
-<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>    tables[[i]]<span class="sc">$</span>Sæson <span class="ot">&lt;-</span> <span class="st">&#39;2023/2024&#39;</span></span>
+<span id="cb2-117"><a href="#cb2-117" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Tilføj 'Sæson' kolonne med værdien '2023/2024'</span></span>
+<span id="cb2-118"><a href="#cb2-118" aria-hidden="true" tabindex="-1"></a>    tables[[i]]<span class="sc">$</span>Sæson <span class="ot">&lt;-</span> <span class="st">'2023/2024'</span></span>
 <span id="cb2-119"><a href="#cb2-119" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-120"><a href="#cb2-120" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Konverter til tibble og gem i listen</span></span>
 <span id="cb2-121"><a href="#cb2-121" aria-hidden="true" tabindex="-1"></a>    tibble_table <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(tables[[i]])</span>
 <span id="cb2-122"><a href="#cb2-122" aria-hidden="true" tabindex="-1"></a>    tibble_list[[i]] <span class="ot">&lt;-</span> tibble_table</span>
 <span id="cb2-123"><a href="#cb2-123" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>    <span class="fu">warning</span>(<span class="fu">paste</span>(<span class="st">&quot;Tabel&quot;</span>, i, <span class="st">&quot;har ikke nok kolonner og/eller mangler et tabelnavn og er udeladt.&quot;</span>))</span>
+<span id="cb2-124"><a href="#cb2-124" aria-hidden="true" tabindex="-1"></a>    <span class="fu">warning</span>(<span class="fu">paste</span>(<span class="st">"Tabel"</span>, i, <span class="st">"har ikke nok kolonner og/eller mangler et tabelnavn og er udeladt."</span>))</span>
 <span id="cb2-125"><a href="#cb2-125" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb2-126"><a href="#cb2-126" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-127"><a href="#cb2-127" aria-hidden="true" tabindex="-1"></a></span>
@@ -319,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-130"><a href="#cb2-130" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-131"><a href="#cb2-131" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-132"><a href="#cb2-132" aria-hidden="true" tabindex="-1"></a>Sason2324 <span class="ot">&lt;-</span> combined_tibble <span class="sc">|&gt;</span> </span>
-<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="st">&quot;Ekstra 1&quot;</span>)</span>
+<span id="cb2-133"><a href="#cb2-133" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="st">"Ekstra 1"</span>)</span>
 <span id="cb2-134"><a href="#cb2-134" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-135"><a href="#cb2-135" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-136"><a href="#cb2-136" aria-hidden="true" tabindex="-1"></a><span class="co">#kombiner de to datasæt</span></span>
@@ -329,71 +337,71 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-140"><a href="#cb2-140" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-141"><a href="#cb2-141" aria-hidden="true" tabindex="-1"></a>superliga <span class="ot">&lt;-</span> superliga <span class="sc">%&gt;%</span></span>
 <span id="cb2-142"><a href="#cb2-142" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>    <span class="at">Dato_udtrukket =</span> <span class="fu">parse_date_time</span>(Dato, <span class="at">orders =</span> <span class="fu">c</span>(<span class="st">&quot;dmHM&quot;</span>, <span class="st">&quot;dHM&quot;</span>)),</span>
+<span id="cb2-143"><a href="#cb2-143" aria-hidden="true" tabindex="-1"></a>    <span class="at">Dato_udtrukket =</span> <span class="fu">parse_date_time</span>(Dato, <span class="at">orders =</span> <span class="fu">c</span>(<span class="st">"dmHM"</span>, <span class="st">"dHM"</span>)),</span>
 <span id="cb2-144"><a href="#cb2-144" aria-hidden="true" tabindex="-1"></a>    <span class="at">Dato_udtrukket =</span> <span class="fu">if_else</span>(<span class="fu">year</span>(Dato_udtrukket) <span class="sc">==</span> <span class="dv">0</span>,</span>
 <span id="cb2-145"><a href="#cb2-145" aria-hidden="true" tabindex="-1"></a>                             <span class="fu">update</span>(Dato_udtrukket, <span class="at">year =</span> <span class="fu">sample</span>(<span class="dv">2020</span>, <span class="dv">1</span>)),</span>
 <span id="cb2-146"><a href="#cb2-146" aria-hidden="true" tabindex="-1"></a>                             Dato_udtrukket)</span>
 <span id="cb2-147"><a href="#cb2-147" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb2-148"><a href="#cb2-148" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-149"><a href="#cb2-149" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>superliga<span class="sc">$</span>Tid_udtrukket <span class="ot">&lt;-</span> <span class="fu">format</span>(<span class="fu">parse_date_time</span>(superliga<span class="sc">$</span>Dato, <span class="at">orders =</span> <span class="fu">c</span>(<span class="st">&quot;dmHM&quot;</span>, <span class="st">&quot;dHM&quot;</span>)), <span class="st">&quot;%H:%M&quot;</span>)</span>
+<span id="cb2-150"><a href="#cb2-150" aria-hidden="true" tabindex="-1"></a>superliga<span class="sc">$</span>Tid_udtrukket <span class="ot">&lt;-</span> <span class="fu">format</span>(<span class="fu">parse_date_time</span>(superliga<span class="sc">$</span>Dato, <span class="at">orders =</span> <span class="fu">c</span>(<span class="st">"dmHM"</span>, <span class="st">"dHM"</span>)), <span class="st">"%H:%M"</span>)</span>
 <span id="cb2-151"><a href="#cb2-151" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-152"><a href="#cb2-152" aria-hidden="true" tabindex="-1"></a>superliga1 <span class="ot">&lt;-</span> superliga <span class="sc">%&gt;%</span></span>
 <span id="cb2-153"><a href="#cb2-153" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb2-154"><a href="#cb2-154" aria-hidden="true" tabindex="-1"></a>    <span class="at">Dato_udtrukket =</span> <span class="fu">as.Date</span>(Dato_udtrukket),  <span class="co"># Konverterer POSIXct til Date</span></span>
 <span id="cb2-155"><a href="#cb2-155" aria-hidden="true" tabindex="-1"></a>    Å<span class="at">rstal =</span> <span class="fu">case_when</span>(</span>
-<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>      <span class="fu">month</span>(Dato_udtrukket) <span class="sc">%in%</span> <span class="dv">7</span><span class="sc">:</span><span class="dv">12</span> <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(Sæson, <span class="st">&quot;^</span><span class="sc">\\</span><span class="st">d{4}&quot;</span>)),</span>
-<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(Sæson, <span class="st">&quot;</span><span class="sc">\\</span><span class="st">d{4}$&quot;</span>))</span>
+<span id="cb2-156"><a href="#cb2-156" aria-hidden="true" tabindex="-1"></a>      <span class="fu">month</span>(Dato_udtrukket) <span class="sc">%in%</span> <span class="dv">7</span><span class="sc">:</span><span class="dv">12</span> <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(Sæson, <span class="st">"^</span><span class="sc">\\</span><span class="st">d{4}"</span>)),</span>
+<span id="cb2-157"><a href="#cb2-157" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">as.numeric</span>(<span class="fu">str_extract</span>(Sæson, <span class="st">"</span><span class="sc">\\</span><span class="st">d{4}$"</span>))</span>
 <span id="cb2-158"><a href="#cb2-158" aria-hidden="true" tabindex="-1"></a>    ),</span>
-<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>    <span class="at">Ny_Dato_udtrukket =</span> <span class="fu">paste</span>(Årstal, <span class="fu">format</span>(Dato_udtrukket, <span class="st">&quot;-%m-%d&quot;</span>))</span>
+<span id="cb2-159"><a href="#cb2-159" aria-hidden="true" tabindex="-1"></a>    <span class="at">Ny_Dato_udtrukket =</span> <span class="fu">paste</span>(Årstal, <span class="fu">format</span>(Dato_udtrukket, <span class="st">"-%m-%d"</span>))</span>
 <span id="cb2-160"><a href="#cb2-160" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Ny_Dato_udtrukket =</span> <span class="fu">str_replace</span>(Ny_Dato_udtrukket, <span class="st">&quot; -&quot;</span>, <span class="st">&quot;-&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Hold, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;Hjemmehold&quot;</span>, <span class="st">&quot;Udehold&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Score, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;Hjemmeholdsmål&quot;</span>, <span class="st">&quot;Udeholdsmål&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-161"><a href="#cb2-161" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Ny_Dato_udtrukket =</span> <span class="fu">str_replace</span>(Ny_Dato_udtrukket, <span class="st">" -"</span>, <span class="st">"-"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-162"><a href="#cb2-162" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Hold, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Hjemmehold"</span>, <span class="st">"Udehold"</span>), <span class="at">sep =</span> <span class="st">"-"</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-163"><a href="#cb2-163" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Score, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Hjemmeholdsmål"</span>, <span class="st">"Udeholdsmål"</span>), <span class="at">sep =</span> <span class="st">"-"</span>, <span class="at">remove =</span> <span class="cn">FALSE</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb2-164"><a href="#cb2-164" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>Dato, <span class="sc">-</span>Dommer, <span class="sc">-</span>Sæson, <span class="sc">-</span>Dato_udtrukket, <span class="sc">-</span>Årstal, <span class="sc">-</span>Hold, <span class="sc">-</span>Score) <span class="sc">%&gt;%</span></span>
 <span id="cb2-165"><a href="#cb2-165" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Tid =</span> Tid_udtrukket, <span class="at">Dato =</span> Ny_Dato_udtrukket) <span class="sc">%&gt;%</span></span>
 <span id="cb2-166"><a href="#cb2-166" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Dato) <span class="sc">%&gt;%</span></span>
 <span id="cb2-167"><a href="#cb2-167" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb2-168"><a href="#cb2-168" aria-hidden="true" tabindex="-1"></a>    <span class="at">ID =</span> <span class="fu">row_number</span>(),</span>
 <span id="cb2-169"><a href="#cb2-169" aria-hidden="true" tabindex="-1"></a>    <span class="at">Hjemmehold =</span> <span class="fu">str_replace_all</span>(Hjemmehold, <span class="fu">c</span>(</span>
-<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;FCN&quot;</span> <span class="ot">=</span> <span class="st">&quot;FC Nordsjælland&quot;</span>,</span>
-<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;RFC&quot;</span> <span class="ot">=</span> <span class="st">&quot;Randers FC&quot;</span>,</span>
-<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;EFB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Esbjerg fB&quot;</span>,</span>
-<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;AGF&quot;</span> <span class="ot">=</span> <span class="st">&quot;AGF&quot;</span>,</span>
-<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;OB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Odense Boldklub&quot;</span>,</span>
-<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;FCM&quot;</span> <span class="ot">=</span> <span class="st">&quot;FC Midtjylland&quot;</span>,</span>
-<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;BIF&quot;</span> <span class="ot">=</span> <span class="st">&quot;Brøndby IF&quot;</span>,</span>
-<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;VFF&quot;</span> <span class="ot">=</span> <span class="st">&quot;Viborg FF&quot;</span>,</span>
-<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;LBK&quot;</span> <span class="ot">=</span> <span class="st">&quot;Lyngby BK&quot;</span>,</span>
-<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;ACH&quot;</span> <span class="ot">=</span> <span class="st">&quot;AC Horsens&quot;</span>,</span>
-<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;AaB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Aalborg BK&quot;</span>,</span>
-<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;FCK&quot;</span> <span class="ot">=</span> <span class="st">&quot;FC København&quot;</span>,</span>
-<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;FCV&quot;</span> <span class="ot">=</span> <span class="st">&quot;FC Vestsjælland&quot;</span>,</span>
-<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;SDR&quot;</span> <span class="ot">=</span> <span class="st">&quot;SønderjyskE&quot;</span>,</span>
-<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;HOB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Hobro IK&quot;</span>,</span>
-<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;SIF&quot;</span> <span class="ot">=</span> <span class="st">&quot;Silkeborg IF&quot;</span>,</span>
-<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;VB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Vejle Boldklub&quot;</span>,</span>
-<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;HIF&quot;</span> <span class="ot">=</span> <span class="st">&quot;Helsingør IF&quot;</span></span>
+<span id="cb2-170"><a href="#cb2-170" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FCN"</span> <span class="ot">=</span> <span class="st">"FC Nordsjælland"</span>,</span>
+<span id="cb2-171"><a href="#cb2-171" aria-hidden="true" tabindex="-1"></a>      <span class="st">"RFC"</span> <span class="ot">=</span> <span class="st">"Randers FC"</span>,</span>
+<span id="cb2-172"><a href="#cb2-172" aria-hidden="true" tabindex="-1"></a>      <span class="st">"EFB"</span> <span class="ot">=</span> <span class="st">"Esbjerg fB"</span>,</span>
+<span id="cb2-173"><a href="#cb2-173" aria-hidden="true" tabindex="-1"></a>      <span class="st">"AGF"</span> <span class="ot">=</span> <span class="st">"AGF"</span>,</span>
+<span id="cb2-174"><a href="#cb2-174" aria-hidden="true" tabindex="-1"></a>      <span class="st">"OB"</span> <span class="ot">=</span> <span class="st">"Odense Boldklub"</span>,</span>
+<span id="cb2-175"><a href="#cb2-175" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FCM"</span> <span class="ot">=</span> <span class="st">"FC Midtjylland"</span>,</span>
+<span id="cb2-176"><a href="#cb2-176" aria-hidden="true" tabindex="-1"></a>      <span class="st">"BIF"</span> <span class="ot">=</span> <span class="st">"Brøndby IF"</span>,</span>
+<span id="cb2-177"><a href="#cb2-177" aria-hidden="true" tabindex="-1"></a>      <span class="st">"VFF"</span> <span class="ot">=</span> <span class="st">"Viborg FF"</span>,</span>
+<span id="cb2-178"><a href="#cb2-178" aria-hidden="true" tabindex="-1"></a>      <span class="st">"LBK"</span> <span class="ot">=</span> <span class="st">"Lyngby BK"</span>,</span>
+<span id="cb2-179"><a href="#cb2-179" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ACH"</span> <span class="ot">=</span> <span class="st">"AC Horsens"</span>,</span>
+<span id="cb2-180"><a href="#cb2-180" aria-hidden="true" tabindex="-1"></a>      <span class="st">"AaB"</span> <span class="ot">=</span> <span class="st">"Aalborg BK"</span>,</span>
+<span id="cb2-181"><a href="#cb2-181" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FCK"</span> <span class="ot">=</span> <span class="st">"FC København"</span>,</span>
+<span id="cb2-182"><a href="#cb2-182" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FCV"</span> <span class="ot">=</span> <span class="st">"FC Vestsjælland"</span>,</span>
+<span id="cb2-183"><a href="#cb2-183" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SDR"</span> <span class="ot">=</span> <span class="st">"SønderjyskE"</span>,</span>
+<span id="cb2-184"><a href="#cb2-184" aria-hidden="true" tabindex="-1"></a>      <span class="st">"HOB"</span> <span class="ot">=</span> <span class="st">"Hobro IK"</span>,</span>
+<span id="cb2-185"><a href="#cb2-185" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SIF"</span> <span class="ot">=</span> <span class="st">"Silkeborg IF"</span>,</span>
+<span id="cb2-186"><a href="#cb2-186" aria-hidden="true" tabindex="-1"></a>      <span class="st">"VB"</span> <span class="ot">=</span> <span class="st">"Vejle Boldklub"</span>,</span>
+<span id="cb2-187"><a href="#cb2-187" aria-hidden="true" tabindex="-1"></a>      <span class="st">"HIF"</span> <span class="ot">=</span> <span class="st">"Helsingør IF"</span></span>
 <span id="cb2-188"><a href="#cb2-188" aria-hidden="true" tabindex="-1"></a>    )),</span>
 <span id="cb2-189"><a href="#cb2-189" aria-hidden="true" tabindex="-1"></a>    <span class="at">Udehold =</span> <span class="fu">str_replace_all</span>(Udehold, <span class="fu">c</span>(</span>
-<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;FCN&quot;</span> <span class="ot">=</span> <span class="st">&quot;FC Nordsjælland&quot;</span>,</span>
-<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;RFC&quot;</span> <span class="ot">=</span> <span class="st">&quot;Randers FC&quot;</span>,</span>
-<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;EFB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Esbjerg fB&quot;</span>,</span>
-<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;AGF&quot;</span> <span class="ot">=</span> <span class="st">&quot;AGF&quot;</span>,</span>
-<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;OB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Odense Boldklub&quot;</span>,</span>
-<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;FCM&quot;</span> <span class="ot">=</span> <span class="st">&quot;FC Midtjylland&quot;</span>,</span>
-<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;BIF&quot;</span> <span class="ot">=</span> <span class="st">&quot;Brøndby IF&quot;</span>,</span>
-<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;VFF&quot;</span> <span class="ot">=</span> <span class="st">&quot;Viborg FF&quot;</span>,</span>
-<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;LBK&quot;</span> <span class="ot">=</span> <span class="st">&quot;Lyngby BK&quot;</span>,</span>
-<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;ACH&quot;</span> <span class="ot">=</span> <span class="st">&quot;AC Horsens&quot;</span>,</span>
-<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;AaB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Aalborg BK&quot;</span>,</span>
-<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;FCK&quot;</span> <span class="ot">=</span> <span class="st">&quot;FC København&quot;</span>,</span>
-<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;FCV&quot;</span> <span class="ot">=</span> <span class="st">&quot;FC Vestsjælland&quot;</span>,</span>
-<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;SDR&quot;</span> <span class="ot">=</span> <span class="st">&quot;SønderjyskE&quot;</span>,</span>
-<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;HOB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Hobro IK&quot;</span>,</span>
-<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;SIF&quot;</span> <span class="ot">=</span> <span class="st">&quot;Silkeborg IF&quot;</span>,</span>
-<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;VB&quot;</span> <span class="ot">=</span> <span class="st">&quot;Vejle Boldklub&quot;</span>,</span>
-<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;HIF&quot;</span> <span class="ot">=</span> <span class="st">&quot;Helsingør IF&quot;</span></span>
+<span id="cb2-190"><a href="#cb2-190" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FCN"</span> <span class="ot">=</span> <span class="st">"FC Nordsjælland"</span>,</span>
+<span id="cb2-191"><a href="#cb2-191" aria-hidden="true" tabindex="-1"></a>      <span class="st">"RFC"</span> <span class="ot">=</span> <span class="st">"Randers FC"</span>,</span>
+<span id="cb2-192"><a href="#cb2-192" aria-hidden="true" tabindex="-1"></a>      <span class="st">"EFB"</span> <span class="ot">=</span> <span class="st">"Esbjerg fB"</span>,</span>
+<span id="cb2-193"><a href="#cb2-193" aria-hidden="true" tabindex="-1"></a>      <span class="st">"AGF"</span> <span class="ot">=</span> <span class="st">"AGF"</span>,</span>
+<span id="cb2-194"><a href="#cb2-194" aria-hidden="true" tabindex="-1"></a>      <span class="st">"OB"</span> <span class="ot">=</span> <span class="st">"Odense Boldklub"</span>,</span>
+<span id="cb2-195"><a href="#cb2-195" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FCM"</span> <span class="ot">=</span> <span class="st">"FC Midtjylland"</span>,</span>
+<span id="cb2-196"><a href="#cb2-196" aria-hidden="true" tabindex="-1"></a>      <span class="st">"BIF"</span> <span class="ot">=</span> <span class="st">"Brøndby IF"</span>,</span>
+<span id="cb2-197"><a href="#cb2-197" aria-hidden="true" tabindex="-1"></a>      <span class="st">"VFF"</span> <span class="ot">=</span> <span class="st">"Viborg FF"</span>,</span>
+<span id="cb2-198"><a href="#cb2-198" aria-hidden="true" tabindex="-1"></a>      <span class="st">"LBK"</span> <span class="ot">=</span> <span class="st">"Lyngby BK"</span>,</span>
+<span id="cb2-199"><a href="#cb2-199" aria-hidden="true" tabindex="-1"></a>      <span class="st">"ACH"</span> <span class="ot">=</span> <span class="st">"AC Horsens"</span>,</span>
+<span id="cb2-200"><a href="#cb2-200" aria-hidden="true" tabindex="-1"></a>      <span class="st">"AaB"</span> <span class="ot">=</span> <span class="st">"Aalborg BK"</span>,</span>
+<span id="cb2-201"><a href="#cb2-201" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FCK"</span> <span class="ot">=</span> <span class="st">"FC København"</span>,</span>
+<span id="cb2-202"><a href="#cb2-202" aria-hidden="true" tabindex="-1"></a>      <span class="st">"FCV"</span> <span class="ot">=</span> <span class="st">"FC Vestsjælland"</span>,</span>
+<span id="cb2-203"><a href="#cb2-203" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SDR"</span> <span class="ot">=</span> <span class="st">"SønderjyskE"</span>,</span>
+<span id="cb2-204"><a href="#cb2-204" aria-hidden="true" tabindex="-1"></a>      <span class="st">"HOB"</span> <span class="ot">=</span> <span class="st">"Hobro IK"</span>,</span>
+<span id="cb2-205"><a href="#cb2-205" aria-hidden="true" tabindex="-1"></a>      <span class="st">"SIF"</span> <span class="ot">=</span> <span class="st">"Silkeborg IF"</span>,</span>
+<span id="cb2-206"><a href="#cb2-206" aria-hidden="true" tabindex="-1"></a>      <span class="st">"VB"</span> <span class="ot">=</span> <span class="st">"Vejle Boldklub"</span>,</span>
+<span id="cb2-207"><a href="#cb2-207" aria-hidden="true" tabindex="-1"></a>      <span class="st">"HIF"</span> <span class="ot">=</span> <span class="st">"Helsingør IF"</span></span>
 <span id="cb2-208"><a href="#cb2-208" aria-hidden="true" tabindex="-1"></a>    )),</span>
 <span id="cb2-209"><a href="#cb2-209" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Superliga/1.Division</span><span class="st">`</span> <span class="ot">=</span> <span class="dv">1</span></span>
 <span id="cb2-210"><a href="#cb2-210" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
@@ -401,7 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-212"><a href="#cb2-212" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-213"><a href="#cb2-213" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-214"><a href="#cb2-214" aria-hidden="true" tabindex="-1"></a>superliga1 <span class="ot">&lt;-</span> superliga1 <span class="sc">%&gt;%</span></span>
-<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Tilskuere =</span> <span class="fu">gsub</span>(<span class="st">&quot;[.]&quot;</span>, <span class="st">&quot;&quot;</span>, Tilskuere),  <span class="co"># Fjerner punktummer</span></span>
+<span id="cb2-215"><a href="#cb2-215" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Tilskuere =</span> <span class="fu">gsub</span>(<span class="st">"[.]"</span>, <span class="st">""</span>, Tilskuere),  <span class="co"># Fjerner punktummer</span></span>
 <span id="cb2-216"><a href="#cb2-216" aria-hidden="true" tabindex="-1"></a>         <span class="at">Tilskuere =</span> <span class="fu">as.numeric</span>(Tilskuere))</span>
 <span id="cb2-217"><a href="#cb2-217" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-218"><a href="#cb2-218" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(superliga)</span>
@@ -411,14 +419,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-222"><a href="#cb2-222" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-223"><a href="#cb2-223" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion til at ekstrahere data fra hver td</span></span>
 <span id="cb2-224"><a href="#cb2-224" aria-hidden="true" tabindex="-1"></a>extract_td_data <span class="ot">&lt;-</span> <span class="cf">function</span>(td, id, season) {</span>
-<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>  img <span class="ot">&lt;-</span> <span class="fu">html_node</span>(td, <span class="st">&quot;img&quot;</span>)</span>
+<span id="cb2-225"><a href="#cb2-225" aria-hidden="true" tabindex="-1"></a>  img <span class="ot">&lt;-</span> <span class="fu">html_node</span>(td, <span class="st">"img"</span>)</span>
 <span id="cb2-226"><a href="#cb2-226" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(img)) {</span>
 <span id="cb2-227"><a href="#cb2-227" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">data.frame</span>(</span>
 <span id="cb2-228"><a href="#cb2-228" aria-hidden="true" tabindex="-1"></a>      <span class="at">ID =</span> id,</span>
 <span id="cb2-229"><a href="#cb2-229" aria-hidden="true" tabindex="-1"></a>      <span class="at">Season =</span> season,</span>
-<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a>      <span class="at">Type =</span> <span class="st">&quot;Image&quot;</span>,</span>
-<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>      <span class="at">Source =</span> <span class="fu">html_attr</span>(img, <span class="st">&quot;src&quot;</span>),</span>
-<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a>      <span class="at">Alt =</span> <span class="fu">html_attr</span>(img, <span class="st">&quot;alt&quot;</span>),</span>
+<span id="cb2-230"><a href="#cb2-230" aria-hidden="true" tabindex="-1"></a>      <span class="at">Type =</span> <span class="st">"Image"</span>,</span>
+<span id="cb2-231"><a href="#cb2-231" aria-hidden="true" tabindex="-1"></a>      <span class="at">Source =</span> <span class="fu">html_attr</span>(img, <span class="st">"src"</span>),</span>
+<span id="cb2-232"><a href="#cb2-232" aria-hidden="true" tabindex="-1"></a>      <span class="at">Alt =</span> <span class="fu">html_attr</span>(img, <span class="st">"alt"</span>),</span>
 <span id="cb2-233"><a href="#cb2-233" aria-hidden="true" tabindex="-1"></a>      <span class="at">Content =</span> <span class="cn">NA</span></span>
 <span id="cb2-234"><a href="#cb2-234" aria-hidden="true" tabindex="-1"></a>    ))</span>
 <span id="cb2-235"><a href="#cb2-235" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
@@ -426,23 +434,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-237"><a href="#cb2-237" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">data.frame</span>(</span>
 <span id="cb2-238"><a href="#cb2-238" aria-hidden="true" tabindex="-1"></a>      <span class="at">ID =</span> id,</span>
 <span id="cb2-239"><a href="#cb2-239" aria-hidden="true" tabindex="-1"></a>      <span class="at">Season =</span> season,</span>
-<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>      <span class="at">Type =</span> <span class="st">&quot;Text&quot;</span>,</span>
+<span id="cb2-240"><a href="#cb2-240" aria-hidden="true" tabindex="-1"></a>      <span class="at">Type =</span> <span class="st">"Text"</span>,</span>
 <span id="cb2-241"><a href="#cb2-241" aria-hidden="true" tabindex="-1"></a>      <span class="at">Source =</span> <span class="cn">NA</span>,</span>
 <span id="cb2-242"><a href="#cb2-242" aria-hidden="true" tabindex="-1"></a>      <span class="at">Alt =</span> <span class="cn">NA</span>,</span>
-<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a>      <span class="at">Content =</span> <span class="fu">ifelse</span>(text_content <span class="sc">==</span> <span class="st">&quot;&quot;</span>, <span class="st">&quot;0&quot;</span>, text_content)</span>
+<span id="cb2-243"><a href="#cb2-243" aria-hidden="true" tabindex="-1"></a>      <span class="at">Content =</span> <span class="fu">ifelse</span>(text_content <span class="sc">==</span> <span class="st">""</span>, <span class="st">"0"</span>, text_content)</span>
 <span id="cb2-244"><a href="#cb2-244" aria-hidden="true" tabindex="-1"></a>    ))</span>
 <span id="cb2-245"><a href="#cb2-245" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb2-246"><a href="#cb2-246" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-247"><a href="#cb2-247" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-248"><a href="#cb2-248" aria-hidden="true" tabindex="-1"></a><span class="co"># Generer en liste over sæsoner fra 2007/2008 til 2023/2024</span></span>
-<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a>seasons1 <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="dv">2007</span><span class="sc">:</span><span class="dv">2023</span>, <span class="st">&quot;%2F&quot;</span>, <span class="dv">2008</span><span class="sc">:</span><span class="dv">2024</span>)</span>
+<span id="cb2-249"><a href="#cb2-249" aria-hidden="true" tabindex="-1"></a>seasons1 <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="dv">2007</span><span class="sc">:</span><span class="dv">2023</span>, <span class="st">"%2F"</span>, <span class="dv">2008</span><span class="sc">:</span><span class="dv">2024</span>)</span>
 <span id="cb2-250"><a href="#cb2-250" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-251"><a href="#cb2-251" aria-hidden="true" tabindex="-1"></a><span class="co"># Tom data.frame til at samle resultaterne</span></span>
 <span id="cb2-252"><a href="#cb2-252" aria-hidden="true" tabindex="-1"></a>all_data1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
 <span id="cb2-253"><a href="#cb2-253" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-254"><a href="#cb2-254" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (season1 <span class="cf">in</span> seasons1) {</span>
 <span id="cb2-255"><a href="#cb2-255" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Opdater URL for hver sæson</span></span>
-<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a>  url1 <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://superstats.dk/program?aar=&quot;</span>, season1)</span>
+<span id="cb2-256"><a href="#cb2-256" aria-hidden="true" tabindex="-1"></a>  url1 <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"https://superstats.dk/program?aar="</span>, season1)</span>
 <span id="cb2-257"><a href="#cb2-257" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-258"><a href="#cb2-258" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fetch the webpage</span></span>
 <span id="cb2-259"><a href="#cb2-259" aria-hidden="true" tabindex="-1"></a>  page1 <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(url1)</span>
@@ -451,7 +459,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-262"><a href="#cb2-262" aria-hidden="true" tabindex="-1"></a>  content1 <span class="ot">&lt;-</span> <span class="fu">read_html</span>(page1)</span>
 <span id="cb2-263"><a href="#cb2-263" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-264"><a href="#cb2-264" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Find alle td-tags med den specificerede style</span></span>
-<span id="cb2-265"><a href="#cb2-265" aria-hidden="true" tabindex="-1"></a>  td_elements1 <span class="ot">&lt;-</span> <span class="fu">html_nodes</span>(content1, <span class="at">xpath =</span> <span class="st">&quot;//td[@style=&#39;text-align:center;&#39;]&quot;</span>)</span>
+<span id="cb2-265"><a href="#cb2-265" aria-hidden="true" tabindex="-1"></a>  td_elements1 <span class="ot">&lt;-</span> <span class="fu">html_nodes</span>(content1, <span class="at">xpath =</span> <span class="st">"//td[@style='text-align:center;']"</span>)</span>
 <span id="cb2-266"><a href="#cb2-266" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-267"><a href="#cb2-267" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Anvend funktionen på hver td og saml resultaterne for sæsonen</span></span>
 <span id="cb2-268"><a href="#cb2-268" aria-hidden="true" tabindex="-1"></a>  td_data1 <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">seq_along</span>(td_elements1), <span class="cf">function</span>(i) <span class="fu">extract_td_data</span>(td_elements1[i], i, season1))</span>
@@ -471,12 +479,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-282"><a href="#cb2-282" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-283"><a href="#cb2-283" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-284"><a href="#cb2-284" aria-hidden="true" tabindex="-1"></a><span class="co"># Her leftjoiner vi med datasættet med Kampdatasættet på ID</span></span>
-<span id="cb2-285"><a href="#cb2-285" aria-hidden="true" tabindex="-1"></a>samletsuperliga <span class="ot">&lt;-</span> <span class="fu">left_join</span>(superligaTV, superliga1, <span class="at">by =</span> <span class="st">&quot;ID&quot;</span>)</span>
+<span id="cb2-285"><a href="#cb2-285" aria-hidden="true" tabindex="-1"></a>samletsuperliga <span class="ot">&lt;-</span> <span class="fu">left_join</span>(superligaTV, superliga1, <span class="at">by =</span> <span class="st">"ID"</span>)</span>
 <span id="cb2-286"><a href="#cb2-286" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-287"><a href="#cb2-287" aria-hidden="true" tabindex="-1"></a><span class="co">#Denne kode skaber et nyt datasæt Samletsuperliga_filtered, der indeholder kun de rækker fra Samletsuperligam, hvor Hjemmehold er &quot;Viborg FF&quot; eller Udehold er &quot;Viborg FF&quot;.</span></span>
+<span id="cb2-287"><a href="#cb2-287" aria-hidden="true" tabindex="-1"></a><span class="co">#Denne kode skaber et nyt datasæt Samletsuperliga_filtered, der indeholder kun de rækker fra Samletsuperligam, hvor Hjemmehold er "Viborg FF" eller Udehold er "Viborg FF".</span></span>
 <span id="cb2-288"><a href="#cb2-288" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-289"><a href="#cb2-289" aria-hidden="true" tabindex="-1"></a>vffsuperliga <span class="ot">&lt;-</span> samletsuperliga <span class="sc">%&gt;%</span></span>
-<span id="cb2-290"><a href="#cb2-290" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Hjemmehold <span class="sc">==</span> <span class="st">&quot;Viborg FF&quot;</span> <span class="sc">|</span> Udehold <span class="sc">==</span> <span class="st">&quot;Viborg FF&quot;</span>)</span>
+<span id="cb2-290"><a href="#cb2-290" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Hjemmehold <span class="sc">==</span> <span class="st">"Viborg FF"</span> <span class="sc">|</span> Udehold <span class="sc">==</span> <span class="st">"Viborg FF"</span>)</span>
 <span id="cb2-291"><a href="#cb2-291" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-292"><a href="#cb2-292" aria-hidden="true" tabindex="-1"></a>vffsuperliga <span class="ot">&lt;-</span> vffsuperliga <span class="sc">%&gt;%</span></span>
 <span id="cb2-293"><a href="#cb2-293" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Runde =</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(Runde)))</span>
@@ -497,21 +505,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-308"><a href="#cb2-308" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-309"><a href="#cb2-309" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop igennem hvert år</span></span>
 <span id="cb2-310"><a href="#cb2-310" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (year <span class="cf">in</span> start_year<span class="sc">:</span>end_year) {</span>
-<span id="cb2-311"><a href="#cb2-311" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Opret URL&#39;en baseret på det aktuelle år</span></span>
-<span id="cb2-312"><a href="#cb2-312" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://superstats.dk/1div/program?aar=&quot;</span>, year, <span class="st">&quot;%2F&quot;</span>, year <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb2-311"><a href="#cb2-311" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Opret URL'en baseret på det aktuelle år</span></span>
+<span id="cb2-312"><a href="#cb2-312" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"https://superstats.dk/1div/program?aar="</span>, year, <span class="st">"%2F"</span>, year <span class="sc">+</span> <span class="dv">1</span>)</span>
 <span id="cb2-313"><a href="#cb2-313" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-314"><a href="#cb2-314" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Send en GET-anmodning for at få HTML-indholdet</span></span>
 <span id="cb2-315"><a href="#cb2-315" aria-hidden="true" tabindex="-1"></a>  response <span class="ot">&lt;-</span> <span class="fu">GET</span>(url)</span>
-<span id="cb2-316"><a href="#cb2-316" aria-hidden="true" tabindex="-1"></a>  content <span class="ot">&lt;-</span> <span class="fu">content</span>(response, <span class="st">&quot;text&quot;</span>)</span>
+<span id="cb2-316"><a href="#cb2-316" aria-hidden="true" tabindex="-1"></a>  content <span class="ot">&lt;-</span> <span class="fu">content</span>(response, <span class="st">"text"</span>)</span>
 <span id="cb2-317"><a href="#cb2-317" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-318"><a href="#cb2-318" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Brug rvest til at læse HTML-indholdet</span></span>
 <span id="cb2-319"><a href="#cb2-319" aria-hidden="true" tabindex="-1"></a>  page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(content)</span>
 <span id="cb2-320"><a href="#cb2-320" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-321"><a href="#cb2-321" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Find alle tabeller, der indeholder &quot;Runde&quot; i navnet</span></span>
-<span id="cb2-322"><a href="#cb2-322" aria-hidden="true" tabindex="-1"></a>  tables1 <span class="ot">&lt;-</span> <span class="fu">html_table</span>(<span class="fu">html_nodes</span>(page, <span class="st">&quot;table:contains(&#39;Runde&#39;)&quot;</span>), <span class="at">convert =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-321"><a href="#cb2-321" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Find alle tabeller, der indeholder "Runde" i navnet</span></span>
+<span id="cb2-322"><a href="#cb2-322" aria-hidden="true" tabindex="-1"></a>  tables1 <span class="ot">&lt;-</span> <span class="fu">html_table</span>(<span class="fu">html_nodes</span>(page, <span class="st">"table:contains('Runde')"</span>), <span class="at">convert =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb2-323"><a href="#cb2-323" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-324"><a href="#cb2-324" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Kombiner tabellerne og tilføj en kolonne med originaltabel-ID</span></span>
-<span id="cb2-325"><a href="#cb2-325" aria-hidden="true" tabindex="-1"></a>  tables_combined <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(tables1, <span class="at">.id =</span> <span class="st">&quot;OriginalTableID&quot;</span>)</span>
+<span id="cb2-325"><a href="#cb2-325" aria-hidden="true" tabindex="-1"></a>  tables_combined <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(tables1, <span class="at">.id =</span> <span class="st">"OriginalTableID"</span>)</span>
 <span id="cb2-326"><a href="#cb2-326" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-327"><a href="#cb2-327" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Gem tabellen i listen</span></span>
 <span id="cb2-328"><a href="#cb2-328" aria-hidden="true" tabindex="-1"></a>  all_tables[[<span class="fu">as.character</span>(year)]] <span class="ot">&lt;-</span> tables_combined</span>
@@ -520,7 +528,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-331"><a href="#cb2-331" aria-hidden="true" tabindex="-1"></a><span class="co"># Kombiner alle tabeller fra forskellige år til én stor tibble</span></span>
 <span id="cb2-332"><a href="#cb2-332" aria-hidden="true" tabindex="-1"></a>final_table <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(all_tables)</span>
 <span id="cb2-333"><a href="#cb2-333" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-334"><a href="#cb2-334" aria-hidden="true" tabindex="-1"></a>danish_weekdays <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;Mandag&quot;</span>, <span class="st">&quot;Tirsdag&quot;</span>, <span class="st">&quot;Onsdag&quot;</span>, <span class="st">&quot;Torsdag&quot;</span>, <span class="st">&quot;Fredag&quot;</span>, <span class="st">&quot;Lørdag&quot;</span>, <span class="st">&quot;Søndag&quot;</span>)</span>
+<span id="cb2-334"><a href="#cb2-334" aria-hidden="true" tabindex="-1"></a>danish_weekdays <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Mandag"</span>, <span class="st">"Tirsdag"</span>, <span class="st">"Onsdag"</span>, <span class="st">"Torsdag"</span>, <span class="st">"Fredag"</span>, <span class="st">"Lørdag"</span>, <span class="st">"Søndag"</span>)</span>
 <span id="cb2-335"><a href="#cb2-335" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-336"><a href="#cb2-336" aria-hidden="true" tabindex="-1"></a><span class="co"># Fjern kolonner med mindst én observation svarende til danske ugedage</span></span>
 <span id="cb2-337"><a href="#cb2-337" aria-hidden="true" tabindex="-1"></a>tables_combined_filtered <span class="ot">&lt;-</span> final_table <span class="sc">%&gt;%</span></span>
@@ -529,47 +537,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-340"><a href="#cb2-340" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-341"><a href="#cb2-341" aria-hidden="true" tabindex="-1"></a>div <span class="ot">&lt;-</span> tables_combined_filtered <span class="sc">%&gt;%</span></span>
 <span id="cb2-342"><a href="#cb2-342" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>...<span class="dv">7</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-343"><a href="#cb2-343" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">...3 =</span> <span class="fu">gsub</span>(<span class="st">&quot;kl.&quot;</span>, <span class="st">&quot; &quot;</span>, ...<span class="dv">3</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb2-344"><a href="#cb2-344" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(...<span class="dv">3</span>, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;Dato&quot;</span>, <span class="st">&quot;Tid&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;</span><span class="sc">\\</span><span class="st">s+&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-343"><a href="#cb2-343" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">...3 =</span> <span class="fu">gsub</span>(<span class="st">"kl."</span>, <span class="st">" "</span>, ...<span class="dv">3</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-344"><a href="#cb2-344" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(...<span class="dv">3</span>, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Dato"</span>, <span class="st">"Tid"</span>), <span class="at">sep =</span> <span class="st">"</span><span class="sc">\\</span><span class="st">s+"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb2-345"><a href="#cb2-345" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Dato =</span> <span class="fu">dmy</span>(Dato)) <span class="sc">%&gt;%</span></span>
-<span id="cb2-346"><a href="#cb2-346" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Res, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;Hjemmeholdsmål&quot;</span>, <span class="st">&quot;Udeholdsmål&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-346"><a href="#cb2-346" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Res, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Hjemmeholdsmål"</span>, <span class="st">"Udeholdsmål"</span>), <span class="at">sep =</span> <span class="st">"-"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb2-347"><a href="#cb2-347" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Dato =</span> <span class="fu">as.Date</span>(Dato))</span>
 <span id="cb2-348"><a href="#cb2-348" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-349"><a href="#cb2-349" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-350"><a href="#cb2-350" aria-hidden="true" tabindex="-1"></a><span class="co"># Angiv dansk lokalisation for ugedage med korrekt karakterkodning</span></span>
-<span id="cb2-351"><a href="#cb2-351" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setlocale</span>(<span class="at">category =</span> <span class="st">&quot;LC_TIME&quot;</span>, <span class="at">locale =</span> <span class="st">&quot;Danish_Denmark.UTF-8&quot;</span>)</span>
+<span id="cb2-351"><a href="#cb2-351" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.setlocale</span>(<span class="at">category =</span> <span class="st">"LC_TIME"</span>, <span class="at">locale =</span> <span class="st">"Danish_Denmark.UTF-8"</span>)</span>
 <span id="cb2-352"><a href="#cb2-352" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-353"><a href="#cb2-353" aria-hidden="true" tabindex="-1"></a>div <span class="ot">&lt;-</span> div <span class="sc">%&gt;%</span></span>
 <span id="cb2-354"><a href="#cb2-354" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Ugedag =</span> <span class="fu">weekdays</span>(Dato)) <span class="sc">%&gt;%</span></span>
 <span id="cb2-355"><a href="#cb2-355" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Ugedag =</span> <span class="fu">case_when</span>(</span>
-<span id="cb2-356"><a href="#cb2-356" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">&quot;søndag&quot;</span>    <span class="sc">~</span> <span class="st">&quot;Søn&quot;</span>,</span>
-<span id="cb2-357"><a href="#cb2-357" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">&quot;mandag&quot;</span>    <span class="sc">~</span> <span class="st">&quot;Man&quot;</span>,</span>
-<span id="cb2-358"><a href="#cb2-358" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">&quot;tirsdag&quot;</span>   <span class="sc">~</span> <span class="st">&quot;Tir&quot;</span>,</span>
-<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">&quot;onsdag&quot;</span>    <span class="sc">~</span> <span class="st">&quot;Ons&quot;</span>,</span>
-<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">&quot;torsdag&quot;</span>   <span class="sc">~</span> <span class="st">&quot;Tor&quot;</span>,</span>
-<span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">&quot;fredag&quot;</span>    <span class="sc">~</span> <span class="st">&quot;Fre&quot;</span>,</span>
-<span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">&quot;lørdag&quot;</span>    <span class="sc">~</span> <span class="st">&quot;Lør&quot;</span>,</span>
+<span id="cb2-356"><a href="#cb2-356" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">"søndag"</span>    <span class="sc">~</span> <span class="st">"Søn"</span>,</span>
+<span id="cb2-357"><a href="#cb2-357" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">"mandag"</span>    <span class="sc">~</span> <span class="st">"Man"</span>,</span>
+<span id="cb2-358"><a href="#cb2-358" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">"tirsdag"</span>   <span class="sc">~</span> <span class="st">"Tir"</span>,</span>
+<span id="cb2-359"><a href="#cb2-359" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">"onsdag"</span>    <span class="sc">~</span> <span class="st">"Ons"</span>,</span>
+<span id="cb2-360"><a href="#cb2-360" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">"torsdag"</span>   <span class="sc">~</span> <span class="st">"Tor"</span>,</span>
+<span id="cb2-361"><a href="#cb2-361" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">"fredag"</span>    <span class="sc">~</span> <span class="st">"Fre"</span>,</span>
+<span id="cb2-362"><a href="#cb2-362" aria-hidden="true" tabindex="-1"></a>    Ugedag <span class="sc">==</span> <span class="st">"lørdag"</span>    <span class="sc">~</span> <span class="st">"Lør"</span>,</span>
 <span id="cb2-363"><a href="#cb2-363" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span>                  <span class="sc">~</span> Ugedag  <span class="co"># Bevar uændrede navne for andre dage</span></span>
 <span id="cb2-364"><a href="#cb2-364" aria-hidden="true" tabindex="-1"></a>  ))</span>
 <span id="cb2-365"><a href="#cb2-365" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-366"><a href="#cb2-366" aria-hidden="true" tabindex="-1"></a>div</span>
 <span id="cb2-367"><a href="#cb2-367" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a><span class="co"># Opret en vektor med stigende numre baseret på antallet af rækker i &quot;div&quot;</span></span>
+<span id="cb2-368"><a href="#cb2-368" aria-hidden="true" tabindex="-1"></a><span class="co"># Opret en vektor med stigende numre baseret på antallet af rækker i "div"</span></span>
 <span id="cb2-369"><a href="#cb2-369" aria-hidden="true" tabindex="-1"></a>id_vector <span class="ot">&lt;-</span> <span class="fu">seq_len</span>(<span class="fu">nrow</span>(div))</span>
 <span id="cb2-370"><a href="#cb2-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a><span class="co"># Tilføj denne vektor som en kolonne med navnet &quot;ID&quot; til dataframe&#39;en</span></span>
+<span id="cb2-371"><a href="#cb2-371" aria-hidden="true" tabindex="-1"></a><span class="co"># Tilføj denne vektor som en kolonne med navnet "ID" til dataframe'en</span></span>
 <span id="cb2-372"><a href="#cb2-372" aria-hidden="true" tabindex="-1"></a>div<span class="sc">$</span>ID <span class="ot">&lt;-</span> id_vector</span>
 <span id="cb2-373"><a href="#cb2-373" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-374"><a href="#cb2-374" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-375"><a href="#cb2-375" aria-hidden="true" tabindex="-1"></a>div1 <span class="ot">&lt;-</span> div <span class="sc">%&gt;%</span></span>
 <span id="cb2-376"><a href="#cb2-376" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(ID, <span class="fu">everything</span>()) <span class="sc">%&gt;%</span></span>
 <span id="cb2-377"><a href="#cb2-377" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Runde =</span> OriginalTableID) <span class="sc">%&gt;%</span></span>
-<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Kamp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">&quot;Hjemmehold&quot;</span>, <span class="st">&quot;Udehold&quot;</span>), <span class="at">sep =</span> <span class="st">&quot;-&quot;</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">&quot;Superliga/1.Division&quot;</span> <span class="ot">=</span> <span class="dv">0</span>)</span>
+<span id="cb2-378"><a href="#cb2-378" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(Kamp, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"Hjemmehold"</span>, <span class="st">"Udehold"</span>), <span class="at">sep =</span> <span class="st">"-"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-379"><a href="#cb2-379" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">"Superliga/1.Division"</span> <span class="ot">=</span> <span class="dv">0</span>)</span>
 <span id="cb2-380"><a href="#cb2-380" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-381"><a href="#cb2-381" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-382"><a href="#cb2-382" aria-hidden="true" tabindex="-1"></a>div1 <span class="ot">&lt;-</span> div1 <span class="sc">%&gt;%</span></span>
-<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Tilskuere =</span> <span class="fu">gsub</span>(<span class="st">&quot;[.]&quot;</span>, <span class="st">&quot;&quot;</span>, Tilskuere),  <span class="co"># Fjerner punktummer</span></span>
+<span id="cb2-383"><a href="#cb2-383" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Tilskuere =</span> <span class="fu">gsub</span>(<span class="st">"[.]"</span>, <span class="st">""</span>, Tilskuere),  <span class="co"># Fjerner punktummer</span></span>
 <span id="cb2-384"><a href="#cb2-384" aria-hidden="true" tabindex="-1"></a>         <span class="at">Tilskuere =</span> <span class="fu">as.numeric</span>(Tilskuere))</span>
 <span id="cb2-385"><a href="#cb2-385" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-386"><a href="#cb2-386" aria-hidden="true" tabindex="-1"></a></span>
@@ -580,14 +588,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-391"><a href="#cb2-391" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-392"><a href="#cb2-392" aria-hidden="true" tabindex="-1"></a><span class="co"># Funktion til at ekstrahere data fra hver td</span></span>
 <span id="cb2-393"><a href="#cb2-393" aria-hidden="true" tabindex="-1"></a>extract_td_data <span class="ot">&lt;-</span> <span class="cf">function</span>(td, id, season) {</span>
-<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a>  img <span class="ot">&lt;-</span> <span class="fu">html_node</span>(td, <span class="st">&quot;img&quot;</span>)</span>
+<span id="cb2-394"><a href="#cb2-394" aria-hidden="true" tabindex="-1"></a>  img <span class="ot">&lt;-</span> <span class="fu">html_node</span>(td, <span class="st">"img"</span>)</span>
 <span id="cb2-395"><a href="#cb2-395" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(img)) {</span>
 <span id="cb2-396"><a href="#cb2-396" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">data.frame</span>(</span>
 <span id="cb2-397"><a href="#cb2-397" aria-hidden="true" tabindex="-1"></a>      <span class="at">ID =</span> id,</span>
 <span id="cb2-398"><a href="#cb2-398" aria-hidden="true" tabindex="-1"></a>      <span class="at">Season =</span> season,</span>
-<span id="cb2-399"><a href="#cb2-399" aria-hidden="true" tabindex="-1"></a>      <span class="at">Type =</span> <span class="st">&quot;Image&quot;</span>,</span>
-<span id="cb2-400"><a href="#cb2-400" aria-hidden="true" tabindex="-1"></a>      <span class="at">Source =</span> <span class="fu">html_attr</span>(img, <span class="st">&quot;src&quot;</span>),</span>
-<span id="cb2-401"><a href="#cb2-401" aria-hidden="true" tabindex="-1"></a>      <span class="at">Alt =</span> <span class="fu">html_attr</span>(img, <span class="st">&quot;alt&quot;</span>),</span>
+<span id="cb2-399"><a href="#cb2-399" aria-hidden="true" tabindex="-1"></a>      <span class="at">Type =</span> <span class="st">"Image"</span>,</span>
+<span id="cb2-400"><a href="#cb2-400" aria-hidden="true" tabindex="-1"></a>      <span class="at">Source =</span> <span class="fu">html_attr</span>(img, <span class="st">"src"</span>),</span>
+<span id="cb2-401"><a href="#cb2-401" aria-hidden="true" tabindex="-1"></a>      <span class="at">Alt =</span> <span class="fu">html_attr</span>(img, <span class="st">"alt"</span>),</span>
 <span id="cb2-402"><a href="#cb2-402" aria-hidden="true" tabindex="-1"></a>      <span class="at">Content =</span> <span class="cn">NA</span></span>
 <span id="cb2-403"><a href="#cb2-403" aria-hidden="true" tabindex="-1"></a>    ))</span>
 <span id="cb2-404"><a href="#cb2-404" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
@@ -595,23 +603,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-406"><a href="#cb2-406" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(<span class="fu">data.frame</span>(</span>
 <span id="cb2-407"><a href="#cb2-407" aria-hidden="true" tabindex="-1"></a>      <span class="at">ID =</span> id,</span>
 <span id="cb2-408"><a href="#cb2-408" aria-hidden="true" tabindex="-1"></a>      <span class="at">Season =</span> season,</span>
-<span id="cb2-409"><a href="#cb2-409" aria-hidden="true" tabindex="-1"></a>      <span class="at">Type =</span> <span class="st">&quot;Text&quot;</span>,</span>
+<span id="cb2-409"><a href="#cb2-409" aria-hidden="true" tabindex="-1"></a>      <span class="at">Type =</span> <span class="st">"Text"</span>,</span>
 <span id="cb2-410"><a href="#cb2-410" aria-hidden="true" tabindex="-1"></a>      <span class="at">Source =</span> <span class="cn">NA</span>,</span>
 <span id="cb2-411"><a href="#cb2-411" aria-hidden="true" tabindex="-1"></a>      <span class="at">Alt =</span> <span class="cn">NA</span>,</span>
-<span id="cb2-412"><a href="#cb2-412" aria-hidden="true" tabindex="-1"></a>      <span class="at">Content =</span> <span class="fu">ifelse</span>(text_content <span class="sc">==</span> <span class="st">&quot;&quot;</span>, <span class="st">&quot;0&quot;</span>, text_content)</span>
+<span id="cb2-412"><a href="#cb2-412" aria-hidden="true" tabindex="-1"></a>      <span class="at">Content =</span> <span class="fu">ifelse</span>(text_content <span class="sc">==</span> <span class="st">""</span>, <span class="st">"0"</span>, text_content)</span>
 <span id="cb2-413"><a href="#cb2-413" aria-hidden="true" tabindex="-1"></a>    ))</span>
 <span id="cb2-414"><a href="#cb2-414" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb2-415"><a href="#cb2-415" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-416"><a href="#cb2-416" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-417"><a href="#cb2-417" aria-hidden="true" tabindex="-1"></a><span class="co"># Generer en liste over sæsoner fra 2007/2008 til 2023/2024</span></span>
-<span id="cb2-418"><a href="#cb2-418" aria-hidden="true" tabindex="-1"></a>seasons <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="dv">2007</span><span class="sc">:</span><span class="dv">2023</span>, <span class="st">&quot;%2F&quot;</span>, <span class="dv">2008</span><span class="sc">:</span><span class="dv">2024</span>)</span>
+<span id="cb2-418"><a href="#cb2-418" aria-hidden="true" tabindex="-1"></a>seasons <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="dv">2007</span><span class="sc">:</span><span class="dv">2023</span>, <span class="st">"%2F"</span>, <span class="dv">2008</span><span class="sc">:</span><span class="dv">2024</span>)</span>
 <span id="cb2-419"><a href="#cb2-419" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-420"><a href="#cb2-420" aria-hidden="true" tabindex="-1"></a><span class="co"># Tom data.frame til at samle resultaterne</span></span>
 <span id="cb2-421"><a href="#cb2-421" aria-hidden="true" tabindex="-1"></a>all_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>()</span>
 <span id="cb2-422"><a href="#cb2-422" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-423"><a href="#cb2-423" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (season <span class="cf">in</span> seasons) {</span>
 <span id="cb2-424"><a href="#cb2-424" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Opdater URL for hver sæson</span></span>
-<span id="cb2-425"><a href="#cb2-425" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://superstats.dk/1div/program?aar=&quot;</span>, season)</span>
+<span id="cb2-425"><a href="#cb2-425" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"https://superstats.dk/1div/program?aar="</span>, season)</span>
 <span id="cb2-426"><a href="#cb2-426" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-427"><a href="#cb2-427" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fetch the webpage</span></span>
 <span id="cb2-428"><a href="#cb2-428" aria-hidden="true" tabindex="-1"></a>  page <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(url)</span>
@@ -620,7 +628,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-431"><a href="#cb2-431" aria-hidden="true" tabindex="-1"></a>  content <span class="ot">&lt;-</span> <span class="fu">read_html</span>(page)</span>
 <span id="cb2-432"><a href="#cb2-432" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-433"><a href="#cb2-433" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Find alle td-tags med den specificerede style</span></span>
-<span id="cb2-434"><a href="#cb2-434" aria-hidden="true" tabindex="-1"></a>  td_elements <span class="ot">&lt;-</span> <span class="fu">html_nodes</span>(content, <span class="at">xpath =</span> <span class="st">&quot;//td[@style=&#39;text-align:center;&#39;]&quot;</span>)</span>
+<span id="cb2-434"><a href="#cb2-434" aria-hidden="true" tabindex="-1"></a>  td_elements <span class="ot">&lt;-</span> <span class="fu">html_nodes</span>(content, <span class="at">xpath =</span> <span class="st">"//td[@style='text-align:center;']"</span>)</span>
 <span id="cb2-435"><a href="#cb2-435" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-436"><a href="#cb2-436" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Anvend funktionen på hver td og saml resultaterne for sæsonen</span></span>
 <span id="cb2-437"><a href="#cb2-437" aria-hidden="true" tabindex="-1"></a>  td_data <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">seq_along</span>(td_elements), <span class="cf">function</span>(i) <span class="fu">extract_td_data</span>(td_elements[i], i, season))</span>
@@ -631,15 +639,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-442"><a href="#cb2-442" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-443"><a href="#cb2-443" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-444"><a href="#cb2-444" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-445"><a href="#cb2-445" aria-hidden="true" tabindex="-1"></a>TV <span class="ot">&lt;-</span> all_data[, <span class="sc">!</span>(<span class="fu">names</span>(all_data) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Season&quot;</span>, <span class="st">&quot;Type&quot;</span>, <span class="st">&quot;Content&quot;</span>, <span class="st">&quot;Source&quot;</span>))]</span>
+<span id="cb2-445"><a href="#cb2-445" aria-hidden="true" tabindex="-1"></a>TV <span class="ot">&lt;-</span> all_data[, <span class="sc">!</span>(<span class="fu">names</span>(all_data) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Season"</span>, <span class="st">"Type"</span>, <span class="st">"Content"</span>, <span class="st">"Source"</span>))]</span>
 <span id="cb2-446"><a href="#cb2-446" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-447"><a href="#cb2-447" aria-hidden="true" tabindex="-1"></a>DivTV <span class="ot">&lt;-</span> TV <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">ID =</span> <span class="fu">row_number</span>())</span>
 <span id="cb2-448"><a href="#cb2-448" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-449"><a href="#cb2-449" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-450"><a href="#cb2-450" aria-hidden="true" tabindex="-1"></a>samletdivision <span class="ot">&lt;-</span> <span class="fu">left_join</span>(DivTV, div1, <span class="at">by =</span> <span class="st">&quot;ID&quot;</span>)</span>
+<span id="cb2-450"><a href="#cb2-450" aria-hidden="true" tabindex="-1"></a>samletdivision <span class="ot">&lt;-</span> <span class="fu">left_join</span>(DivTV, div1, <span class="at">by =</span> <span class="st">"ID"</span>)</span>
 <span id="cb2-451"><a href="#cb2-451" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-452"><a href="#cb2-452" aria-hidden="true" tabindex="-1"></a>VFFdivision <span class="ot">&lt;-</span> samletdivision <span class="sc">%&gt;%</span></span>
-<span id="cb2-453"><a href="#cb2-453" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Udehold <span class="sc">==</span> <span class="st">&quot;Viborg FF&quot;</span> <span class="sc">|</span> Hjemmehold <span class="sc">==</span> <span class="st">&quot;Viborg FF&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-453"><a href="#cb2-453" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Udehold <span class="sc">==</span> <span class="st">"Viborg FF"</span> <span class="sc">|</span> Hjemmehold <span class="sc">==</span> <span class="st">"Viborg FF"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb2-454"><a href="#cb2-454" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb2-455"><a href="#cb2-455" aria-hidden="true" tabindex="-1"></a>    <span class="at">Runde =</span> <span class="fu">as.numeric</span>(<span class="fu">as.character</span>(Runde)),</span>
 <span id="cb2-456"><a href="#cb2-456" aria-hidden="true" tabindex="-1"></a>    <span class="at">Dato =</span> <span class="fu">as.character</span>(Dato)</span>
@@ -673,8 +681,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-484"><a href="#cb2-484" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-485"><a href="#cb2-485" aria-hidden="true" tabindex="-1"></a><span class="co"># Tilføjelse af form variablen</span></span>
 <span id="cb2-486"><a href="#cb2-486" aria-hidden="true" tabindex="-1"></a>viborg_resultat_hjemme <span class="ot">&lt;-</span> VFFallesasoner <span class="sc">%&gt;%</span> </span>
-<span id="cb2-487"><a href="#cb2-487" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Hjemmehold <span class="sc">==</span> <span class="st">&quot;Viborg FF&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-488"><a href="#cb2-488" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">&#39;V/U/T&#39;</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-487"><a href="#cb2-487" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Hjemmehold <span class="sc">==</span> <span class="st">"Viborg FF"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-488"><a href="#cb2-488" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">'V/U/T'</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
 <span id="cb2-489"><a href="#cb2-489" aria-hidden="true" tabindex="-1"></a>    Hjemmeholdsmål <span class="sc">&gt;</span> Udeholdsmål <span class="sc">~</span> <span class="dv">2</span>,</span>
 <span id="cb2-490"><a href="#cb2-490" aria-hidden="true" tabindex="-1"></a>    Hjemmeholdsmål <span class="sc">==</span> Udeholdsmål <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb2-491"><a href="#cb2-491" aria-hidden="true" tabindex="-1"></a>    Hjemmeholdsmål <span class="sc">&lt;</span> Udeholdsmål <span class="sc">~</span> <span class="dv">0</span>, </span>
@@ -683,8 +691,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-494"><a href="#cb2-494" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-495"><a href="#cb2-495" aria-hidden="true" tabindex="-1"></a><span class="co"># Viborgs udekampe sorteres ud for at udregne formen</span></span>
 <span id="cb2-496"><a href="#cb2-496" aria-hidden="true" tabindex="-1"></a>viborg_resultat_ude <span class="ot">&lt;-</span> VFFallesasoner <span class="sc">%&gt;%</span> </span>
-<span id="cb2-497"><a href="#cb2-497" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Udehold <span class="sc">==</span> <span class="st">&quot;Viborg FF&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb2-498"><a href="#cb2-498" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">&#39;V/U/T&#39;</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-497"><a href="#cb2-497" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Udehold <span class="sc">==</span> <span class="st">"Viborg FF"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-498"><a href="#cb2-498" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">'V/U/T'</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
 <span id="cb2-499"><a href="#cb2-499" aria-hidden="true" tabindex="-1"></a>    Udeholdsmål <span class="sc">&gt;</span> Hjemmeholdsmål <span class="sc">~</span> <span class="dv">2</span>,</span>
 <span id="cb2-500"><a href="#cb2-500" aria-hidden="true" tabindex="-1"></a>    Udeholdsmål <span class="sc">==</span> Hjemmeholdsmål <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb2-501"><a href="#cb2-501" aria-hidden="true" tabindex="-1"></a>    Udeholdsmål <span class="sc">&lt;</span> Hjemmeholdsmål <span class="sc">~</span> <span class="dv">0</span>, </span>
@@ -704,7 +712,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-515"><a href="#cb2-515" aria-hidden="true" tabindex="-1"></a>viborg_form <span class="ot">&lt;-</span> samlet_resultat_viborg <span class="sc">%&gt;%</span> </span>
 <span id="cb2-516"><a href="#cb2-516" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(Dato) <span class="sc">%&gt;%</span> </span>
 <span id="cb2-517"><a href="#cb2-517" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb2-518"><a href="#cb2-518" aria-hidden="true" tabindex="-1"></a>    <span class="at">Sidste_5_sum =</span> <span class="fu">lag</span>(<span class="fu">rollapplyr</span>(<span class="st">`</span><span class="at">V/U/T</span><span class="st">`</span>, <span class="at">width =</span> <span class="dv">5</span>, <span class="at">FUN =</span> sum, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">align =</span> <span class="st">&quot;right&quot;</span>)),</span>
+<span id="cb2-518"><a href="#cb2-518" aria-hidden="true" tabindex="-1"></a>    <span class="at">Sidste_5_sum =</span> <span class="fu">lag</span>(<span class="fu">rollapplyr</span>(<span class="st">`</span><span class="at">V/U/T</span><span class="st">`</span>, <span class="at">width =</span> <span class="dv">5</span>, <span class="at">FUN =</span> sum, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">align =</span> <span class="st">"right"</span>)),</span>
 <span id="cb2-519"><a href="#cb2-519" aria-hidden="true" tabindex="-1"></a>    <span class="at">Sidste_5_sum =</span> <span class="fu">ifelse</span>(<span class="fu">is.na</span>(Sidste_5_sum), <span class="dv">0</span>, Sidste_5_sum),</span>
 <span id="cb2-520"><a href="#cb2-520" aria-hidden="true" tabindex="-1"></a>    <span class="at">Form =</span> <span class="fu">case_when</span>(</span>
 <span id="cb2-521"><a href="#cb2-521" aria-hidden="true" tabindex="-1"></a>      <span class="fu">is.na</span>(Sidste_5_sum) <span class="sc">~</span> <span class="cn">NA_real_</span>,</span>
@@ -731,12 +739,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-542"><a href="#cb2-542" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-543"><a href="#cb2-543" aria-hidden="true" tabindex="-1"></a><span class="co"># Her tilføjes modstander variablen</span></span>
 <span id="cb2-544"><a href="#cb2-544" aria-hidden="true" tabindex="-1"></a><span class="co"># Definer ABC hold</span></span>
-<span id="cb2-545"><a href="#cb2-545" aria-hidden="true" tabindex="-1"></a>A_hold <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;FC København&#39;</span>, <span class="st">&#39;Brøndby IF&#39;</span>, <span class="st">&#39;FC Midtjylland&#39;</span>)</span>
-<span id="cb2-546"><a href="#cb2-546" aria-hidden="true" tabindex="-1"></a>B_hold <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&#39;Silkeborg IF&#39;</span>, <span class="st">&#39;AGF&#39;</span>, <span class="st">&#39;Aalborg BK&#39;</span>, <span class="st">&#39;Randers FC&#39;</span>)</span>
+<span id="cb2-545"><a href="#cb2-545" aria-hidden="true" tabindex="-1"></a>A_hold <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'FC København'</span>, <span class="st">'Brøndby IF'</span>, <span class="st">'FC Midtjylland'</span>)</span>
+<span id="cb2-546"><a href="#cb2-546" aria-hidden="true" tabindex="-1"></a>B_hold <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'Silkeborg IF'</span>, <span class="st">'AGF'</span>, <span class="st">'Aalborg BK'</span>, <span class="st">'Randers FC'</span>)</span>
 <span id="cb2-547"><a href="#cb2-547" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-548"><a href="#cb2-548" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-549"><a href="#cb2-549" aria-hidden="true" tabindex="-1"></a><span class="co"># Create dummy variables for home opponents</span></span>
-<span id="cb2-550"><a href="#cb2-550" aria-hidden="true" tabindex="-1"></a>viborg_ferieuge<span class="sc">$</span><span class="st">&#39;Modstander Type&#39;</span> <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(viborg_ferieuge<span class="sc">$</span>Udehold <span class="sc">%in%</span> A_hold, <span class="dv">0</span>,</span>
+<span id="cb2-550"><a href="#cb2-550" aria-hidden="true" tabindex="-1"></a>viborg_ferieuge<span class="sc">$</span><span class="st">'Modstander Type'</span> <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(viborg_ferieuge<span class="sc">$</span>Udehold <span class="sc">%in%</span> A_hold, <span class="dv">0</span>,</span>
 <span id="cb2-551"><a href="#cb2-551" aria-hidden="true" tabindex="-1"></a>                                            <span class="fu">ifelse</span>(viborg_ferieuge<span class="sc">$</span>Udehold <span class="sc">%in%</span> B_hold, <span class="dv">1</span>, <span class="dv">2</span>))</span>
 <span id="cb2-552"><a href="#cb2-552" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-553"><a href="#cb2-553" aria-hidden="true" tabindex="-1"></a></span>
@@ -746,11 +754,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-557"><a href="#cb2-557" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 = Lørdag</span></span>
 <span id="cb2-558"><a href="#cb2-558" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 = Søndag</span></span>
 <span id="cb2-559"><a href="#cb2-559" aria-hidden="true" tabindex="-1"></a><span class="co"># Definer hverdage</span></span>
-<span id="cb2-560"><a href="#cb2-560" aria-hidden="true" tabindex="-1"></a>Hverdage <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&#39;Man&#39;</span>, <span class="st">&#39;Tir&#39;</span>, <span class="st">&#39;Ons&#39;</span>, <span class="st">&#39;Tor&#39;</span>, <span class="st">&#39;Fre&#39;</span>)</span>
+<span id="cb2-560"><a href="#cb2-560" aria-hidden="true" tabindex="-1"></a>Hverdage <span class="ot">=</span> <span class="fu">c</span>(<span class="st">'Man'</span>, <span class="st">'Tir'</span>, <span class="st">'Ons'</span>, <span class="st">'Tor'</span>, <span class="st">'Fre'</span>)</span>
 <span id="cb2-561"><a href="#cb2-561" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-562"><a href="#cb2-562" aria-hidden="true" tabindex="-1"></a><span class="co"># Dummy variabler for dage</span></span>
 <span id="cb2-563"><a href="#cb2-563" aria-hidden="true" tabindex="-1"></a>viborg_ferieuge<span class="sc">$</span>Dagtype <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(viborg_ferieuge<span class="sc">$</span>Ugedag <span class="sc">%in%</span> Hverdage, <span class="dv">0</span>, </span>
-<span id="cb2-564"><a href="#cb2-564" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">ifelse</span>(viborg_ferieuge<span class="sc">$</span>Ugedag <span class="sc">==</span> <span class="st">&#39;Lør&#39;</span>, <span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb2-564"><a href="#cb2-564" aria-hidden="true" tabindex="-1"></a>                                  <span class="fu">ifelse</span>(viborg_ferieuge<span class="sc">$</span>Ugedag <span class="sc">==</span> <span class="st">'Lør'</span>, <span class="dv">1</span>, <span class="dv">2</span>))</span>
 <span id="cb2-565"><a href="#cb2-565" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-566"><a href="#cb2-566" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-567"><a href="#cb2-567" aria-hidden="true" tabindex="-1"></a></span>
@@ -759,25 +767,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-570"><a href="#cb2-570" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 = Mellem eller lige med 15:00:00 - 18:00:00</span></span>
 <span id="cb2-571"><a href="#cb2-571" aria-hidden="true" tabindex="-1"></a><span class="co"># 0 = Før 15:00:00</span></span>
 <span id="cb2-572"><a href="#cb2-572" aria-hidden="true" tabindex="-1"></a>viborg_ferieuge <span class="ot">&lt;-</span> viborg_ferieuge <span class="sc">%&gt;%</span> </span>
-<span id="cb2-573"><a href="#cb2-573" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Tid =</span> <span class="fu">gsub</span>(<span class="st">&quot;</span><span class="sc">\\</span><span class="st">.&quot;</span>, <span class="st">&quot;:&quot;</span>, Tid)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-573"><a href="#cb2-573" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Tid =</span> <span class="fu">gsub</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">."</span>, <span class="st">":"</span>, Tid)) <span class="sc">%&gt;%</span> </span>
 <span id="cb2-574"><a href="#cb2-574" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Tid =</span> <span class="fu">parse_time</span>(Tid))</span>
 <span id="cb2-575"><a href="#cb2-575" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-576"><a href="#cb2-576" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-577"><a href="#cb2-577" aria-hidden="true" tabindex="-1"></a>viborg_ferieuge <span class="ot">&lt;-</span> viborg_ferieuge <span class="sc">%&gt;%</span> </span>
-<span id="cb2-578"><a href="#cb2-578" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">&#39;Tid på dagen&#39;</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
-<span id="cb2-579"><a href="#cb2-579" aria-hidden="true" tabindex="-1"></a>    lubridate<span class="sc">::</span><span class="fu">hms</span>(Tid) <span class="sc">&lt;</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(<span class="st">&quot;15:00:00&quot;</span>) <span class="sc">~</span> <span class="dv">0</span>,</span>
-<span id="cb2-580"><a href="#cb2-580" aria-hidden="true" tabindex="-1"></a>    lubridate<span class="sc">::</span><span class="fu">hms</span>(Tid) <span class="sc">&gt;=</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(<span class="st">&quot;15:00:00&quot;</span>) <span class="sc">&amp;</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(Tid) <span class="sc">&lt;=</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(<span class="st">&quot;18:00:00&quot;</span>) <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb2-581"><a href="#cb2-581" aria-hidden="true" tabindex="-1"></a>    lubridate<span class="sc">::</span><span class="fu">hms</span>(Tid) <span class="sc">&gt;</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(<span class="st">&quot;18:00:00&quot;</span>) <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb2-578"><a href="#cb2-578" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">'Tid på dagen'</span> <span class="ot">=</span> <span class="fu">case_when</span>(</span>
+<span id="cb2-579"><a href="#cb2-579" aria-hidden="true" tabindex="-1"></a>    lubridate<span class="sc">::</span><span class="fu">hms</span>(Tid) <span class="sc">&lt;</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(<span class="st">"15:00:00"</span>) <span class="sc">~</span> <span class="dv">0</span>,</span>
+<span id="cb2-580"><a href="#cb2-580" aria-hidden="true" tabindex="-1"></a>    lubridate<span class="sc">::</span><span class="fu">hms</span>(Tid) <span class="sc">&gt;=</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(<span class="st">"15:00:00"</span>) <span class="sc">&amp;</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(Tid) <span class="sc">&lt;=</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(<span class="st">"18:00:00"</span>) <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb2-581"><a href="#cb2-581" aria-hidden="true" tabindex="-1"></a>    lubridate<span class="sc">::</span><span class="fu">hms</span>(Tid) <span class="sc">&gt;</span> lubridate<span class="sc">::</span><span class="fu">hms</span>(<span class="st">"18:00:00"</span>) <span class="sc">~</span> <span class="dv">2</span>,</span>
 <span id="cb2-582"><a href="#cb2-582" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_integer_</span></span>
 <span id="cb2-583"><a href="#cb2-583" aria-hidden="true" tabindex="-1"></a>  ))</span>
 <span id="cb2-584"><a href="#cb2-584" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-585"><a href="#cb2-585" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-586"><a href="#cb2-586" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-587"><a href="#cb2-587" aria-hidden="true" tabindex="-1"></a>popular_TV <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;TV3+&quot;</span>, <span class="st">&quot;TV2 SPORT&quot;</span>, <span class="st">&quot;TV3 Sport&quot;</span>)</span>
+<span id="cb2-587"><a href="#cb2-587" aria-hidden="true" tabindex="-1"></a>popular_TV <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"TV3+"</span>, <span class="st">"TV2 SPORT"</span>, <span class="st">"TV3 Sport"</span>)</span>
 <span id="cb2-588"><a href="#cb2-588" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-589"><a href="#cb2-589" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-590"><a href="#cb2-590" aria-hidden="true" tabindex="-1"></a>viborg_ferieuge <span class="ot">&lt;-</span> viborg_ferieuge <span class="sc">%&gt;%</span> </span>
-<span id="cb2-591"><a href="#cb2-591" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">&#39;Populær kanal&#39;</span> <span class="ot">=</span> <span class="fu">ifelse</span>(Alt <span class="sc">%in%</span> popular_TV, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-591"><a href="#cb2-591" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="st">'Populær kanal'</span> <span class="ot">=</span> <span class="fu">ifelse</span>(Alt <span class="sc">%in%</span> popular_TV, <span class="dv">1</span>, <span class="dv">0</span>)) <span class="sc">%&gt;%</span> </span>
 <span id="cb2-592"><a href="#cb2-592" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>Alt)</span>
 <span id="cb2-593"><a href="#cb2-593" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-594"><a href="#cb2-594" aria-hidden="true" tabindex="-1"></a>superstats <span class="ot">&lt;-</span> viborg_ferieuge</span>
@@ -795,14 +803,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-606"><a href="#cb2-606" aria-hidden="true" tabindex="-1"></a>  current_date <span class="ot">&lt;-</span> start_date</span>
 <span id="cb2-607"><a href="#cb2-607" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span> (current_date <span class="sc">&lt;=</span> end_date) {</span>
 <span id="cb2-608"><a href="#cb2-608" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Opret URL med den aktuelle dato og parameter</span></span>
-<span id="cb2-609"><a href="#cb2-609" aria-hidden="true" tabindex="-1"></a>    req_url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;stationId=06060&amp;datetime=&quot;</span>, <span class="fu">format</span>(current_date, <span class="st">&quot;%Y-%m-%dT12:00:00Z&quot;</span>), <span class="st">&quot;&amp;limit=300000&amp;parameterId=&quot;</span>, parameter)</span>
+<span id="cb2-609"><a href="#cb2-609" aria-hidden="true" tabindex="-1"></a>    req_url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"stationId=06060&amp;datetime="</span>, <span class="fu">format</span>(current_date, <span class="st">"%Y-%m-%dT12:00:00Z"</span>), <span class="st">"&amp;limit=300000&amp;parameterId="</span>, parameter)</span>
 <span id="cb2-610"><a href="#cb2-610" aria-hidden="true" tabindex="-1"></a>    full_url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(base_url, info_url, req_url, api_key)</span>
 <span id="cb2-611"><a href="#cb2-611" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-612"><a href="#cb2-612" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Hent data fra API</span></span>
 <span id="cb2-613"><a href="#cb2-613" aria-hidden="true" tabindex="-1"></a>    api_call <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">GET</span>(full_url)</span>
 <span id="cb2-614"><a href="#cb2-614" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-615"><a href="#cb2-615" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Kontroller statuskoden</span></span>
-<span id="cb2-616"><a href="#cb2-616" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">http_type</span>(api_call) <span class="sc">==</span> <span class="st">&quot;application/json&quot;</span> <span class="sc">&amp;&amp;</span> api_call<span class="sc">$</span>status_code <span class="sc">==</span> <span class="dv">200</span>) {</span>
+<span id="cb2-616"><a href="#cb2-616" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">http_type</span>(api_call) <span class="sc">==</span> <span class="st">"application/json"</span> <span class="sc">&amp;&amp;</span> api_call<span class="sc">$</span>status_code <span class="sc">==</span> <span class="dv">200</span>) {</span>
 <span id="cb2-617"><a href="#cb2-617" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Hvis alt er i orden, fortsæt med at håndtere data</span></span>
 <span id="cb2-618"><a href="#cb2-618" aria-hidden="true" tabindex="-1"></a>      api_char <span class="ot">&lt;-</span> base<span class="sc">::</span><span class="fu">rawToChar</span>(api_call<span class="sc">$</span>content)</span>
 <span id="cb2-619"><a href="#cb2-619" aria-hidden="true" tabindex="-1"></a>      api_JSON <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(api_char, <span class="at">flatten =</span> <span class="cn">TRUE</span>)</span>
@@ -815,11 +823,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-626"><a href="#cb2-626" aria-hidden="true" tabindex="-1"></a>        dataframes_list[[<span class="fu">as.character</span>(current_date)]] <span class="ot">&lt;-</span> dataframe</span>
 <span id="cb2-627"><a href="#cb2-627" aria-hidden="true" tabindex="-1"></a>      }</span>
 <span id="cb2-628"><a href="#cb2-628" aria-hidden="true" tabindex="-1"></a>      <span class="co"># Kommenter næste linje ud for at undlade at udskrive beskeden</span></span>
-<span id="cb2-629"><a href="#cb2-629" aria-hidden="true" tabindex="-1"></a>      <span class="co"># cat(&quot;Ingen observationer kl. 12 for&quot;, current_date, &quot;\n&quot;)</span></span>
+<span id="cb2-629"><a href="#cb2-629" aria-hidden="true" tabindex="-1"></a>      <span class="co"># cat("Ingen observationer kl. 12 for", current_date, "\n")</span></span>
 <span id="cb2-630"><a href="#cb2-630" aria-hidden="true" tabindex="-1"></a>    } </span>
 <span id="cb2-631"><a href="#cb2-631" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Fjern kommenteringen fra næste linje, hvis du vil udskrive fejlmeddelelser</span></span>
 <span id="cb2-632"><a href="#cb2-632" aria-hidden="true" tabindex="-1"></a>    <span class="co"># else {</span></span>
-<span id="cb2-633"><a href="#cb2-633" aria-hidden="true" tabindex="-1"></a>    <span class="co">#   cat(&quot;Fejl ved hentning af data for&quot;, current_date, &quot;\n&quot;)</span></span>
+<span id="cb2-633"><a href="#cb2-633" aria-hidden="true" tabindex="-1"></a>    <span class="co">#   cat("Fejl ved hentning af data for", current_date, "\n")</span></span>
 <span id="cb2-634"><a href="#cb2-634" aria-hidden="true" tabindex="-1"></a>    <span class="co"># }</span></span>
 <span id="cb2-635"><a href="#cb2-635" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-636"><a href="#cb2-636" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Opdater datoen til næste dag</span></span>
@@ -831,16 +839,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-642"><a href="#cb2-642" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb2-643"><a href="#cb2-643" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-644"><a href="#cb2-644" aria-hidden="true" tabindex="-1"></a><span class="co"># Liste af parametre</span></span>
-<span id="cb2-645"><a href="#cb2-645" aria-hidden="true" tabindex="-1"></a>parameters <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;temp_dry&quot;</span>, <span class="st">&quot;wind_speed&quot;</span>, <span class="st">&quot;humidity&quot;</span>, <span class="st">&quot;visibility&quot;</span>, <span class="st">&quot;precip_past1h&quot;</span>, <span class="st">&quot;humidity_past1h&quot;</span>)</span>
+<span id="cb2-645"><a href="#cb2-645" aria-hidden="true" tabindex="-1"></a>parameters <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"temp_dry"</span>, <span class="st">"wind_speed"</span>, <span class="st">"humidity"</span>, <span class="st">"visibility"</span>, <span class="st">"precip_past1h"</span>, <span class="st">"humidity_past1h"</span>)</span>
 <span id="cb2-646"><a href="#cb2-646" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-647"><a href="#cb2-647" aria-hidden="true" tabindex="-1"></a><span class="co"># Startdato og slutdato</span></span>
-<span id="cb2-648"><a href="#cb2-648" aria-hidden="true" tabindex="-1"></a>start_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">&quot;2007-01-01&quot;</span>)</span>
-<span id="cb2-649"><a href="#cb2-649" aria-hidden="true" tabindex="-1"></a>end_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">&quot;2023-12-04&quot;</span>)</span>
+<span id="cb2-648"><a href="#cb2-648" aria-hidden="true" tabindex="-1"></a>start_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2007-01-01"</span>)</span>
+<span id="cb2-649"><a href="#cb2-649" aria-hidden="true" tabindex="-1"></a>end_date <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2023-12-04"</span>)</span>
 <span id="cb2-650"><a href="#cb2-650" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-651"><a href="#cb2-651" aria-hidden="true" tabindex="-1"></a><span class="co"># Basis URL for API-kald</span></span>
-<span id="cb2-652"><a href="#cb2-652" aria-hidden="true" tabindex="-1"></a>base_url <span class="ot">&lt;-</span> <span class="st">&quot;https://dmigw.govcloud.dk/v2/&quot;</span></span>
-<span id="cb2-653"><a href="#cb2-653" aria-hidden="true" tabindex="-1"></a>info_url <span class="ot">&lt;-</span> <span class="st">&quot;metObs/collections/observation/items?&quot;</span></span>
-<span id="cb2-654"><a href="#cb2-654" aria-hidden="true" tabindex="-1"></a>api_key <span class="ot">&lt;-</span> <span class="st">&quot;&amp;api-key=7d5db05b-3c27-4b2b-ac78-728ddd02a9aa&quot;</span> <span class="co">#Husk at indsætte egen DMI</span></span>
+<span id="cb2-652"><a href="#cb2-652" aria-hidden="true" tabindex="-1"></a>base_url <span class="ot">&lt;-</span> <span class="st">"https://dmigw.govcloud.dk/v2/"</span></span>
+<span id="cb2-653"><a href="#cb2-653" aria-hidden="true" tabindex="-1"></a>info_url <span class="ot">&lt;-</span> <span class="st">"metObs/collections/observation/items?"</span></span>
+<span id="cb2-654"><a href="#cb2-654" aria-hidden="true" tabindex="-1"></a>api_key <span class="ot">&lt;-</span> <span class="st">"&amp;api-key=7d5db05b-3c27-4b2b-ac78-728ddd02a9aa"</span> <span class="co">#Husk at indsætte egen DMI</span></span>
 <span id="cb2-655"><a href="#cb2-655" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-656"><a href="#cb2-656" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialiser en tom liste til at gemme dataframes for hvert parameter</span></span>
 <span id="cb2-657"><a href="#cb2-657" aria-hidden="true" tabindex="-1"></a>all_dataframes_list <span class="ot">&lt;-</span> <span class="fu">list</span>()</span>
@@ -865,7 +873,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-676"><a href="#cb2-676" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-677"><a href="#cb2-677" aria-hidden="true" tabindex="-1"></a>dmiAll1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb2-678"><a href="#cb2-678" aria-hidden="true" tabindex="-1"></a>  <span class="at">Dato =</span> <span class="fu">as.Date</span>(col1),</span>
-<span id="cb2-679"><a href="#cb2-679" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tid =</span> <span class="fu">format</span>(<span class="fu">as.POSIXct</span>(col1), <span class="st">&quot;%H:%M:%S&quot;</span>),</span>
+<span id="cb2-679"><a href="#cb2-679" aria-hidden="true" tabindex="-1"></a>  <span class="at">Tid =</span> <span class="fu">format</span>(<span class="fu">as.POSIXct</span>(col1), <span class="st">"%H:%M:%S"</span>),</span>
 <span id="cb2-680"><a href="#cb2-680" aria-hidden="true" tabindex="-1"></a>  <span class="at">Observationer =</span> col2,</span>
 <span id="cb2-681"><a href="#cb2-681" aria-hidden="true" tabindex="-1"></a>  Værdi <span class="ot">=</span> col3</span>
 <span id="cb2-682"><a href="#cb2-682" aria-hidden="true" tabindex="-1"></a>) </span>
@@ -892,13 +900,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-703"><a href="#cb2-703" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-704"><a href="#cb2-704" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-705"><a href="#cb2-705" aria-hidden="true" tabindex="-1"></a><span class="do">## Her bygger vi vores api kald op</span></span>
-<span id="cb2-706"><a href="#cb2-706" aria-hidden="true" tabindex="-1"></a>base_url <span class="ot">&lt;-</span> <span class="st">&quot;https://api.statbank.dk/v1/data/&quot;</span> </span>
+<span id="cb2-706"><a href="#cb2-706" aria-hidden="true" tabindex="-1"></a>base_url <span class="ot">&lt;-</span> <span class="st">"https://api.statbank.dk/v1/data/"</span> </span>
 <span id="cb2-707"><a href="#cb2-707" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-708"><a href="#cb2-708" aria-hidden="true" tabindex="-1"></a>data_url <span class="ot">&lt;-</span> <span class="st">&quot;FOLK1A/JSONSTAT?&quot;</span></span>
+<span id="cb2-708"><a href="#cb2-708" aria-hidden="true" tabindex="-1"></a>data_url <span class="ot">&lt;-</span> <span class="st">"FOLK1A/JSONSTAT?"</span></span>
 <span id="cb2-709"><a href="#cb2-709" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-710"><a href="#cb2-710" aria-hidden="true" tabindex="-1"></a>info_url <span class="ot">&lt;-</span> <span class="st">&quot;OMR%C3%85DE=791&amp;K%C3%98N=TOT&amp;ALDER=IALT&amp;CIVILSTAND=TOT&amp;Tid=*&quot;</span> </span>
+<span id="cb2-710"><a href="#cb2-710" aria-hidden="true" tabindex="-1"></a>info_url <span class="ot">&lt;-</span> <span class="st">"OMR%C3%85DE=791&amp;K%C3%98N=TOT&amp;ALDER=IALT&amp;CIVILSTAND=TOT&amp;Tid=*"</span> </span>
 <span id="cb2-711"><a href="#cb2-711" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-712"><a href="#cb2-712" aria-hidden="true" tabindex="-1"></a><span class="do">## her samler vi vores url til en url, som vi kalder api&#39;et med </span></span>
+<span id="cb2-712"><a href="#cb2-712" aria-hidden="true" tabindex="-1"></a><span class="do">## her samler vi vores url til en url, som vi kalder api'et med </span></span>
 <span id="cb2-713"><a href="#cb2-713" aria-hidden="true" tabindex="-1"></a>full_url <span class="ot">&lt;-</span> base<span class="sc">::</span><span class="fu">paste0</span>(base_url, data_url, info_url)</span>
 <span id="cb2-714"><a href="#cb2-714" aria-hidden="true" tabindex="-1"></a>full_url</span>
 <span id="cb2-715"><a href="#cb2-715" aria-hidden="true" tabindex="-1"></a></span>
@@ -916,11 +924,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-727"><a href="#cb2-727" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-728"><a href="#cb2-728" aria-hidden="true" tabindex="-1"></a><span class="do">## Her ser vi, om der kommer noget data med tilbage; dette er hexadecimal</span></span>
 <span id="cb2-729"><a href="#cb2-729" aria-hidden="true" tabindex="-1"></a><span class="do">## Er der kun et par hexadecimaler oppe i  venstre hjørne, så er der sikkert </span></span>
-<span id="cb2-730"><a href="#cb2-730" aria-hidden="true" tabindex="-1"></a><span class="do">## også noget galt med kaldet til API&#39;et</span></span>
+<span id="cb2-730"><a href="#cb2-730" aria-hidden="true" tabindex="-1"></a><span class="do">## også noget galt med kaldet til API'et</span></span>
 <span id="cb2-731"><a href="#cb2-731" aria-hidden="true" tabindex="-1"></a>api_call<span class="sc">$</span>content</span>
 <span id="cb2-732"><a href="#cb2-732" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-733"><a href="#cb2-733" aria-hidden="true" tabindex="-1"></a><span class="do">### Efter at have tjekket kaldet ovenfor og set, at vi får et brugbart response,</span></span>
-<span id="cb2-734"><a href="#cb2-734" aria-hidden="true" tabindex="-1"></a><span class="do">### bruger vi &quot;fromJSONstat&quot; fra &quot;rjstat&quot; pakken. Denne parser JSONstat formatet</span></span>
+<span id="cb2-734"><a href="#cb2-734" aria-hidden="true" tabindex="-1"></a><span class="do">### bruger vi "fromJSONstat" fra "rjstat" pakken. Denne parser JSONstat formatet</span></span>
 <span id="cb2-735"><a href="#cb2-735" aria-hidden="true" tabindex="-1"></a><span class="do">### fra JSONstat objekter til en læsbar list: </span></span>
 <span id="cb2-736"><a href="#cb2-736" aria-hidden="true" tabindex="-1"></a>jsonList1 <span class="ot">&lt;-</span> <span class="fu">fromJSONstat</span>(full_url)</span>
 <span id="cb2-737"><a href="#cb2-737" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(jsonList1)</span>
@@ -938,12 +946,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-749"><a href="#cb2-749" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(value, tid)</span>
 <span id="cb2-750"><a href="#cb2-750" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-751"><a href="#cb2-751" aria-hidden="true" tabindex="-1"></a><span class="co"># Opret en sekvens af datoer fra 1.1.2008 til 1.11.2023 med daglig frekvens</span></span>
-<span id="cb2-752"><a href="#cb2-752" aria-hidden="true" tabindex="-1"></a>alle_datoer <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">as.Date</span>(<span class="st">&quot;2008-01-01&quot;</span>), <span class="fu">as.Date</span>(<span class="st">&quot;2023-11-01&quot;</span>), <span class="at">by =</span> <span class="st">&quot;day&quot;</span>)</span>
+<span id="cb2-752"><a href="#cb2-752" aria-hidden="true" tabindex="-1"></a>alle_datoer <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">as.Date</span>(<span class="st">"2008-01-01"</span>), <span class="fu">as.Date</span>(<span class="st">"2023-11-01"</span>), <span class="at">by =</span> <span class="st">"day"</span>)</span>
 <span id="cb2-753"><a href="#cb2-753" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-754"><a href="#cb2-754" aria-hidden="true" tabindex="-1"></a><span class="co"># Opret en ny dataframe</span></span>
 <span id="cb2-755"><a href="#cb2-755" aria-hidden="true" tabindex="-1"></a>datoer <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb2-756"><a href="#cb2-756" aria-hidden="true" tabindex="-1"></a>  <span class="at">Dato =</span> alle_datoer,</span>
-<span id="cb2-757"><a href="#cb2-757" aria-hidden="true" tabindex="-1"></a>  <span class="at">tid =</span> <span class="fu">paste0</span>(<span class="fu">format</span>(alle_datoer, <span class="st">&quot;%Y&quot;</span>), <span class="st">&quot;K&quot;</span>, <span class="fu">quarter</span>(alle_datoer))</span>
+<span id="cb2-757"><a href="#cb2-757" aria-hidden="true" tabindex="-1"></a>  <span class="at">tid =</span> <span class="fu">paste0</span>(<span class="fu">format</span>(alle_datoer, <span class="st">"%Y"</span>), <span class="st">"K"</span>, <span class="fu">quarter</span>(alle_datoer))</span>
 <span id="cb2-758"><a href="#cb2-758" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb2-759"><a href="#cb2-759" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-760"><a href="#cb2-760" aria-hidden="true" tabindex="-1"></a><span class="co"># Vis de første rækker i resultatet</span></span>
@@ -951,7 +959,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-762"><a href="#cb2-762" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-763"><a href="#cb2-763" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-764"><a href="#cb2-764" aria-hidden="true" tabindex="-1"></a><span class="co"># Foretag en venstre join mellem datoer og viborgindbyggere</span></span>
-<span id="cb2-765"><a href="#cb2-765" aria-hidden="true" tabindex="-1"></a>indbyggerdato <span class="ot">&lt;-</span> <span class="fu">merge</span>(datoer, viborgindbyggere, <span class="at">by =</span> <span class="st">&quot;tid&quot;</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-765"><a href="#cb2-765" aria-hidden="true" tabindex="-1"></a>indbyggerdato <span class="ot">&lt;-</span> <span class="fu">merge</span>(datoer, viborgindbyggere, <span class="at">by =</span> <span class="st">"tid"</span>, <span class="at">all.x =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb2-766"><a href="#cb2-766" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-767"><a href="#cb2-767" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-768"><a href="#cb2-768" aria-hidden="true" tabindex="-1"></a></span>
@@ -964,14 +972,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-775"><a href="#cb2-775" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-776"><a href="#cb2-776" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop gennem år fra 2007 til 2023</span></span>
 <span id="cb2-777"><a href="#cb2-777" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (year <span class="cf">in</span> <span class="dv">2007</span><span class="sc">:</span><span class="dv">2023</span>) {</span>
-<span id="cb2-778"><a href="#cb2-778" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Konstruér URL&#39;en med det aktuelle år</span></span>
-<span id="cb2-779"><a href="#cb2-779" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">&quot;https://www.kalender-365.dk/helligdage/&quot;</span>, year, <span class="st">&quot;.html&quot;</span>)</span>
+<span id="cb2-778"><a href="#cb2-778" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Konstruér URL'en med det aktuelle år</span></span>
+<span id="cb2-779"><a href="#cb2-779" aria-hidden="true" tabindex="-1"></a>  url <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"https://www.kalender-365.dk/helligdage/"</span>, year, <span class="st">".html"</span>)</span>
 <span id="cb2-780"><a href="#cb2-780" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-781"><a href="#cb2-781" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Hent HTML fra URL&#39;en</span></span>
+<span id="cb2-781"><a href="#cb2-781" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Hent HTML fra URL'en</span></span>
 <span id="cb2-782"><a href="#cb2-782" aria-hidden="true" tabindex="-1"></a>  html <span class="ot">&lt;-</span> <span class="fu">read_html</span>(url)</span>
 <span id="cb2-783"><a href="#cb2-783" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb2-784"><a href="#cb2-784" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Udtræk tabeldata fra HTML&#39;en (tilpas selektoren efter behov)</span></span>
-<span id="cb2-785"><a href="#cb2-785" aria-hidden="true" tabindex="-1"></a>  table_data <span class="ot">&lt;-</span> <span class="fu">html_table</span>(<span class="fu">html_nodes</span>(html, <span class="st">&quot;.table&quot;</span>), <span class="at">fill =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-784"><a href="#cb2-784" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Udtræk tabeldata fra HTML'en (tilpas selektoren efter behov)</span></span>
+<span id="cb2-785"><a href="#cb2-785" aria-hidden="true" tabindex="-1"></a>  table_data <span class="ot">&lt;-</span> <span class="fu">html_table</span>(<span class="fu">html_nodes</span>(html, <span class="st">".table"</span>), <span class="at">fill =</span> <span class="cn">TRUE</span>)</span>
 <span id="cb2-786"><a href="#cb2-786" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb2-787"><a href="#cb2-787" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Hvis der er data i tabellen</span></span>
 <span id="cb2-788"><a href="#cb2-788" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(table_data)) {</span>
@@ -987,10 +995,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-798"><a href="#cb2-798" aria-hidden="true" tabindex="-1"></a>Helligdage <span class="ot">&lt;-</span> <span class="fu">do.call</span>(rbind, all_data)</span>
 <span id="cb2-799"><a href="#cb2-799" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-800"><a href="#cb2-800" aria-hidden="true" tabindex="-1"></a>Helligdage <span class="ot">&lt;-</span> Helligdage <span class="sc">%&gt;%</span></span>
-<span id="cb2-801"><a href="#cb2-801" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>Helligdage<span class="sc">$</span>Helligdag <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">&quot;Valentinsdag&quot;</span>, <span class="st">&quot;Sommertid&quot;</span>, <span class="st">&quot;Mors dag&quot;</span>, <span class="st">&quot;Fars dag&quot;</span>, <span class="st">&quot;Sankt Hans&quot;</span>, <span class="st">&quot;Vintertid&quot;</span>, <span class="st">&quot;Halloween&quot;</span>, <span class="st">&quot;Mortensdag&quot;</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb2-802"><a href="#cb2-802" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="st">&quot;Dage tilbage&quot;</span>, <span class="sc">-</span>Helligdag, <span class="sc">-</span>Dag) <span class="sc">%&gt;%</span></span>
+<span id="cb2-801"><a href="#cb2-801" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>Helligdage<span class="sc">$</span>Helligdag <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Valentinsdag"</span>, <span class="st">"Sommertid"</span>, <span class="st">"Mors dag"</span>, <span class="st">"Fars dag"</span>, <span class="st">"Sankt Hans"</span>, <span class="st">"Vintertid"</span>, <span class="st">"Halloween"</span>, <span class="st">"Mortensdag"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-802"><a href="#cb2-802" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span><span class="st">"Dage tilbage"</span>, <span class="sc">-</span>Helligdag, <span class="sc">-</span>Dag) <span class="sc">%&gt;%</span></span>
 <span id="cb2-803"><a href="#cb2-803" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Helligd. =</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb2-804"><a href="#cb2-804" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Dato =</span> <span class="fu">format</span>(<span class="fu">dmy</span>(Dato), <span class="st">&quot;%Y-%m-%d&quot;</span>))</span>
+<span id="cb2-804"><a href="#cb2-804" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Dato =</span> <span class="fu">format</span>(<span class="fu">dmy</span>(Dato), <span class="st">"%Y-%m-%d"</span>))</span>
 <span id="cb2-805"><a href="#cb2-805" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-806"><a href="#cb2-806" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-807"><a href="#cb2-807" aria-hidden="true" tabindex="-1"></a>Helligdage</span>
@@ -1009,9 +1017,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-820"><a href="#cb2-820" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-821"><a href="#cb2-821" aria-hidden="true" tabindex="-1"></a><span class="co"># Udfør left join af dmiall og helligedage baseret på dato</span></span>
 <span id="cb2-822"><a href="#cb2-822" aria-hidden="true" tabindex="-1"></a>dmidata <span class="ot">&lt;-</span> dmiAll1 <span class="sc">%&gt;%</span></span>
-<span id="cb2-823"><a href="#cb2-823" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(Helligdage, <span class="at">by =</span> <span class="st">&quot;Dato&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-823"><a href="#cb2-823" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(Helligdage, <span class="at">by =</span> <span class="st">"Dato"</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb2-824"><a href="#cb2-824" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Fortsæt med left join dst baseret på dato</span></span>
-<span id="cb2-825"><a href="#cb2-825" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(indbyggerdato, <span class="at">by =</span> <span class="st">&quot;Dato&quot;</span>)</span>
+<span id="cb2-825"><a href="#cb2-825" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(indbyggerdato, <span class="at">by =</span> <span class="st">"Dato"</span>)</span>
 <span id="cb2-826"><a href="#cb2-826" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-827"><a href="#cb2-827" aria-hidden="true" tabindex="-1"></a>dmidata <span class="ot">&lt;-</span> dmidata <span class="sc">%&gt;%</span></span>
 <span id="cb2-828"><a href="#cb2-828" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>tid) <span class="sc">|&gt;</span> </span>
@@ -1023,24 +1031,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-834"><a href="#cb2-834" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-835"><a href="#cb2-835" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-836"><a href="#cb2-836" aria-hidden="true" tabindex="-1"></a>fulldata <span class="ot">&lt;-</span> superstats <span class="sc">%&gt;%</span></span>
-<span id="cb2-837"><a href="#cb2-837" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(dmidata, <span class="at">by =</span> <span class="st">&quot;Dato&quot;</span>)</span>
+<span id="cb2-837"><a href="#cb2-837" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(dmidata, <span class="at">by =</span> <span class="st">"Dato"</span>)</span>
 <span id="cb2-838"><a href="#cb2-838" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-839"><a href="#cb2-839" aria-hidden="true" tabindex="-1"></a><span class="co"># på baggrund af research indsættes inbyggertal i de manglende observationer der mangler i 2007</span></span>
 <span id="cb2-840"><a href="#cb2-840" aria-hidden="true" tabindex="-1"></a>fulldata<span class="sc">$</span>indbyggertal[<span class="dv">1</span><span class="sc">:</span><span class="dv">18</span>] <span class="ot">&lt;-</span> <span class="dv">90518</span></span>
 <span id="cb2-841"><a href="#cb2-841" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-842"><a href="#cb2-842" aria-hidden="true" tabindex="-1"></a>sl_klar <span class="ot">&lt;-</span> fulldata</span></code></pre></div>
+<span id="cb2-842"><a href="#cb2-842" aria-hidden="true" tabindex="-1"></a>sl_klar <span class="ot">&lt;-</span> fulldata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>This creates a dataset with 542 observations, that we can investigate</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#vi skaber en interaktiv tabel</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#vi skaber en interaktiv tabel</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">datatable</span>(sl_klar, <span class="at">caption =</span> htmltools<span class="sc">::</span>tags<span class="sc">$</span><span class="fu">caption</span>(</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="st">&#39;caption-side: top; text-align: center;&#39;</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;Table 1: &#39;</span>, htmltools<span class="sc">::</span><span class="fu">em</span>(<span class="st">&#39;Viborg FF kampe since 2007 &#39;</span>))</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    )</span></code></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">style =</span> <span class="st">'caption-side: top; text-align: center;'</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Table 1: '</span>, htmltools<span class="sc">::</span><span class="fu">em</span>(<span class="st">'Viborg FF kampe since 2007 '</span>))</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-92e6d5e99cc7e566a502" style="width:100%;height:auto;"></div>
@@ -1049,54 +1057,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 <section id="crisp-dm-metodology" class="level2" data-number="2.3">
-<h2 data-number="2.3"><span class="header-section-number">2.3</span> CRISP-DM metodology</h2>
+<h2 data-number="2.3" class="anchored" data-anchor-id="crisp-dm-metodology"><span class="header-section-number">2.3</span> CRISP-DM metodology</h2>
 <p>The Cross-Industry Standard Process for Data Mining (CRISP-DM) offers a systematic framework for conducting data mining projects. It encompasses six distinct stages: comprehending the business context, understanding the data, preparing the data, developing models, evaluating these models, and implementing them.</p>
 <section id="business-understanding" class="level3" data-number="2.3.1">
-<h3 data-number="2.3.1"><span class="header-section-number">2.3.1</span> Business understanding</h3>
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="business-understanding"><span class="header-section-number">2.3.1</span> Business understanding</h3>
 <p>Viborg FF wishes to predict the number of spectators attending their home games. This is valuable for all departments, but especially the commercial department can benefit from this. Among other things, this can enable them to better plan marketing efforts, purchases, and work schedules.</p>
 </section>
 <section id="data-understanding" class="level3" data-number="2.3.2">
-<h3 data-number="2.3.2"><span class="header-section-number">2.3.2</span> Data Understanding</h3>
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="data-understanding"><span class="header-section-number">2.3.2</span> Data Understanding</h3>
 <p>First we remove the timeperiod where VFF was restricted by corona. After this we filter the dataset so its only showing the VFF homegames and remove all the irellevant columns.</p>
 <div class="cell" data-result="true">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>start_dato <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">&quot;2020-03-07&quot;</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>slut_dato <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">&quot;2021-04-16&quot;</span>)</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>start_dato <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2020-03-07"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>slut_dato <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2021-04-16"</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>sl_klar <span class="ot">&lt;-</span> sl_klar[<span class="sc">!</span>(sl_klar<span class="sc">$</span>Dato <span class="sc">&gt;=</span> start_dato <span class="sc">&amp;</span> sl_klar<span class="sc">$</span>Dato <span class="sc">&lt;=</span> slut_dato), ]</span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrerer NA værdier fra og kigger kun på hjemmestatistik </span></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>sl_klar <span class="ot">&lt;-</span> sl_klar <span class="sc">%&gt;%</span> </span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Hjemmehold <span class="sc">==</span> <span class="st">&quot;Viborg FF&quot;</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Hjemmehold <span class="sc">==</span> <span class="st">"Viborg FF"</span>) <span class="sc">%&gt;%</span> </span>
 <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">na.omit</span>()</span>
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Fjerner irrelevante variabler og samtidig også smider nogle variabler væk for at prøve at gøre modellen bedre. </span></span>
 <span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>sl_klar <span class="ot">=</span> sl_klar <span class="sc">%&gt;%</span> </span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>ID, <span class="sc">-</span>Dato, <span class="sc">-</span>Tid,<span class="sc">-</span> Hjemmehold, <span class="sc">-</span>Udehold, <span class="sc">-</span>Hjemmeholdsmål, <span class="sc">-</span>Udeholdsmål, <span class="sc">-</span>Ugedag)</span></code></pre></div>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>ID, <span class="sc">-</span>Dato, <span class="sc">-</span>Tid,<span class="sc">-</span> Hjemmehold, <span class="sc">-</span>Udehold, <span class="sc">-</span>Hjemmeholdsmål, <span class="sc">-</span>Udeholdsmål, <span class="sc">-</span>Ugedag)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 <section id="data-preparation" class="level3" data-number="2.3.3">
-<h3 data-number="2.3.3"><span class="header-section-number">2.3.3</span> Data Preparation</h3>
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="data-preparation"><span class="header-section-number">2.3.3</span> Data Preparation</h3>
 <p>After importing the data the data has been cleaned and quantitative and qualitative variabels has been created</p>
 </section>
 <section id="modeling" class="level3" data-number="2.3.4">
-<h3 data-number="2.3.4"><span class="header-section-number">2.3.4</span> Modeling</h3>
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="modeling"><span class="header-section-number">2.3.4</span> Modeling</h3>
 <section id="explorative-analysis" class="level4" data-number="2.3.4.1">
-<h4 data-number="2.3.4.1"><span class="header-section-number">2.3.4.1</span> Explorative analysis</h4>
+<h4 data-number="2.3.4.1" class="anchored" data-anchor-id="explorative-analysis"><span class="header-section-number">2.3.4.1</span> Explorative analysis</h4>
 <p>Dividing the dataset into a training set and a separate test set. The training set is used for model training and cross-validation, while the test set is used to evaluate the model’s performance on unknown data.</p>
 <div class="cell" data-result="true">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(Tilskuere <span class="sc">~</span> ., sl_klar)[, <span class="sc">-</span><span class="dv">1</span>]</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(Tilskuere <span class="sc">~</span> ., sl_klar)[, <span class="sc">-</span><span class="dv">1</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> sl_klar<span class="sc">$</span>Tilskuere</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>train <span class="ot">&lt;-</span> <span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(x), <span class="fu">nrow</span>(x)<span class="sc">*</span><span class="dv">2</span><span class="sc">/</span><span class="dv">3</span>)</span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>test <span class="ot">&lt;-</span> (<span class="sc">-</span>train)</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>y.test <span class="ot">&lt;-</span> y[test]</span></code></pre></div>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>y.test <span class="ot">&lt;-</span> y[test]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Lasso</strong></p>
@@ -1104,7 +1112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-result="true">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">^</span><span class="fu">seq</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="at">length =</span> <span class="dv">100</span>)</span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="dv">10</span><span class="sc">^</span><span class="fu">seq</span>(<span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="at">length =</span> <span class="dv">100</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>lasso.mod <span class="ot">&lt;-</span> <span class="fu">glmnet</span>(x[train, ], y[train], <span class="at">alpha =</span> <span class="dv">1</span>,</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">lambda =</span> grid, <span class="at">thresh =</span> <span class="fl">1e-12</span>)</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1113,7 +1121,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>cv.out <span class="ot">&lt;-</span> <span class="fu">cv.glmnet</span>(x[train, ], y[train], <span class="at">alpha =</span> <span class="dv">1</span>, </span>
 <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>                    <span class="at">nfolds =</span><span class="dv">10</span>, <span class="at">lambda =</span> grid)</span>
 <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>cv.out</span></code></pre></div>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>cv.out</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -1127,22 +1135,22 @@ min  37.65    15 1135055 176171      12
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cv.out)</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cv.out)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
 <div>
-<figure>
-<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672" /></p>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bestlam <span class="ot">&lt;-</span> cv.out<span class="sc">$</span>lambda.min</span>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>bestlam <span class="ot">&lt;-</span> cv.out<span class="sc">$</span>lambda.min</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>bestlam_1se <span class="ot">&lt;-</span> cv.out<span class="sc">$</span>lambda<span class="fl">.1</span>se</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>lasso.pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(lasso.mod, <span class="at">s =</span> bestlam, <span class="at">newx =</span> x[test, ]) </span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>mse_lasso <span class="ot">&lt;-</span> <span class="fu">mean</span>((lasso.pred <span class="sc">-</span> y.test)<span class="sc">^</span><span class="dv">2</span>)</span></code></pre></div>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>mse_lasso <span class="ot">&lt;-</span> <span class="fu">mean</span>((lasso.pred <span class="sc">-</span> y.test)<span class="sc">^</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p><strong>Linear regression</strong></p>
@@ -1150,15 +1158,15 @@ min  37.65    15 1135055 176171      12
 <div class="cell" data-result="true">
 <div class="cell-output-display">
 <div>
-<figure>
-<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672" /></p>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 <div class="cell-output-display">
 <div>
-<figure>
-<p><img src="index_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid" width="672" /></p>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-7-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1167,8 +1175,8 @@ min  37.65    15 1135055 176171      12
 <div class="cell" data-result="false" data-execute="false">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beregn korrelationen</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>korrelation <span class="ot">&lt;-</span> <span class="fu">cor</span>(sl_klar<span class="sc">$</span>indbyggertal, sl_klar<span class="sc">$</span>Synlighed, <span class="at">use =</span> <span class="st">&quot;complete.obs&quot;</span>)</span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Beregn korrelationen</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>korrelation <span class="ot">&lt;-</span> <span class="fu">cor</span>(sl_klar<span class="sc">$</span>indbyggertal, sl_klar<span class="sc">$</span>Synlighed, <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>numeric_data <span class="ot">&lt;-</span> sl_klar[<span class="fu">sapply</span>(sl_klar, is.numeric)]</span>
@@ -1176,7 +1184,7 @@ min  37.65    15 1135055 176171      12
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Jeg fravælger Fugtighed, vindhastighed, Nedbør sidste time, Fugtighed sidste time og temperatur.</span></span>
 <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>fulldata4 <span class="ot">&lt;-</span> sl_klar <span class="sc">%&gt;%</span> </span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>Fugtighed, <span class="sc">-</span>Vindhastighed, <span class="sc">-</span><span class="st">`</span><span class="at">Nedbør sidste time</span><span class="st">`</span>, <span class="sc">-</span><span class="st">`</span><span class="at">Fugtighed den sidste time</span><span class="st">`</span>, <span class="sc">-</span>Temperatur)</span></code></pre></div>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="sc">-</span>Fugtighed, <span class="sc">-</span>Vindhastighed, <span class="sc">-</span><span class="st">`</span><span class="at">Nedbør sidste time</span><span class="st">`</span>, <span class="sc">-</span><span class="st">`</span><span class="at">Fugtighed den sidste time</span><span class="st">`</span>, <span class="sc">-</span>Temperatur)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <p>I will now check the significance of each variable. Here we can se that the significant variables are: Superliga, ferie, Dagtype, Tid på dagen og Synlighed, and I chose to continue with these.</p>
@@ -1205,7 +1213,7 @@ Synlighed               1.327e-02  5.331e-03   2.489  0.01352 *
 Helligd.                1.481e+02  2.122e+02   0.698  0.48581    
 indbyggertal            5.878e-02  5.044e-02   1.165  0.24515    
 ---
-Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Residual standard error: 981.8 on 225 degrees of freedom
 Multiple R-squared:  0.7128,    Adjusted R-squared:  0.6988 
@@ -1218,19 +1226,19 @@ F-statistic: 50.77 on 11 and 225 DF,  p-value: &lt; 2.2e-16</code></pre>
 </section>
 </section>
 <section id="evaluation" class="level3" data-number="2.3.5">
-<h3 data-number="2.3.5"><span class="header-section-number">2.3.5</span> Evaluation</h3>
+<h3 data-number="2.3.5" class="anchored" data-anchor-id="evaluation"><span class="header-section-number">2.3.5</span> Evaluation</h3>
 <p>The best performing model is here shown as the linear regression, since the MSE is lowest so I am choosing to continue with this model.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mse_lin</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mse_lin</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 778736.7</code></pre>
 </div>
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r cell-code"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mse_lasso</span></code></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mse_lasso</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 842538.7</code></pre>
@@ -1238,7 +1246,7 @@ F-statistic: 50.77 on 11 and 225 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </section>
 <section id="implementation" class="level3" data-number="2.3.6">
-<h3 data-number="2.3.6"><span class="header-section-number">2.3.6</span> Implementation</h3>
+<h3 data-number="2.3.6" class="anchored" data-anchor-id="implementation"><span class="header-section-number">2.3.6</span> Implementation</h3>
 <p>The prediction has been transformed into a Shiny app that can be implemented in the VFF system. The app can be seen <a href="https://mettej.shinyapps.io/portefolio/">here.</a></p>
 </section>
 </section>
@@ -1250,7 +1258,7 @@ F-statistic: 50.77 on 11 and 225 DF,  p-value: &lt; 2.2e-16</code></pre>
 
 </main>
 <!-- /main column -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1639,6 +1647,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 </div> <!-- /content -->
 
-</body>
 
-</html>
+
+
+</body></html>
