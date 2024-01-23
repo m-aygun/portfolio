@@ -990,6 +990,7 @@ Best Subset Selection involves examining all possible combinations of predictors
 #| code-fold: true
 #| warning: false
 #| result: true
+#| output: false
 
 
 
@@ -1029,14 +1030,35 @@ for (j in 1:k) { # her gennemløbes alle folds
   }
 }
 
+```
+
+As we can se, the best model has 9 variables. But in order so keep the model as simple at posible it is better to select less variables if the increase in MSE is small.
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| result: true
+
 mean.cv.errors <- apply(cv.errors, 2, mean) # apply er en smart funktion, der 
 # gennemløber alle rækker og tager gennemsnittet henover hver søjle, som svarer 
 # til hver kandidatmodel.
 mean.cv.errors # Vi får altså en gennemsnitlig MSE for hver kandidatmodel.
 par(mfrow = c(1, 1))
-plot(mean.cv.errors, type = "b") # Her plottes disse gennemsnit for hver størrelse,
-which.min(mean.cv.errors)
 
+plot(mean.cv.errors, type = "b") # Her plottes disse gennemsnit for hver størrelse,
+
+# dette viser den model med den laveste MSE. Det er en model med 9 variabler
+which.min(mean.cv.errors)
+```
+
+Therefor I we chose a model with 3 variables, and the model is tested on the test data.
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| warning: false
+#| result: true
+#| output: false
 
 # Her fittes modellen til ALLE træningsdata
 reg.best <- regsubsets(Tilskuere ~ ., data = sl_klar_train,
@@ -1047,7 +1069,9 @@ pred_best_subset <- predict(reg.best, sl_klar_test, id = 3)
 
 
 mse_best_subset <- mean((sl_klar[test,]$Tilskuere - pred_best_subset)^2)
+
 mse_best_subset
+
 ```
 
 **Lasso**
@@ -1076,6 +1100,7 @@ bestlam <- cv.out$lambda.min
 bestlam_1se <- cv.out$lambda.1se
 
 lasso.pred <- predict(lasso.mod, s = bestlam, newx = x[test, ]) 
+
 mse_lasso <- mean((lasso.pred - y.test)^2)
 ```
 
@@ -1181,6 +1206,12 @@ mse_lin
 The best performing model is here shown as the linear regression, since the MSE is lowest so I am choosing to continue with this model.
 
 ```{r}
+
+#| echo: true
+#| warning: false
+#| result: true
+#| code-fold: false
+
 mse_lin
 mse_lasso
 mse_best_subset
