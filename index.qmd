@@ -19,7 +19,7 @@ format:
     number-sections: true
 ---
 
-![Soccerplayer data](DALL·E 2024-01-20 08.21.21 - Create an image of a soccer player in a dynamic pose, looking upwards towards a soccer ball suspended in the air. The player is surrounded by futurist.png){fig-alt="Soccerplayer data"}
+![Soccerplayer data](DALL·E%202024-01-20%2008.21.21%20-%20Create%20an%20image%20of%20a%20soccer%20player%20in%20a%20dynamic%20pose,%20looking%20upwards%20towards%20a%20soccer%20ball%20suspended%20in%20the%20air.%20The%20player%20is%20surrounded%20by%20futurist.png){fig-alt="Soccerplayer data"}
 
 # Introduction
 
@@ -978,12 +978,81 @@ set.seed(123)
 train <- sample(1:nrow(x), nrow(x)*2/3)
 test <- (-train)
 y.test <- y[test]
+
+```
+
+**Best subset selection**
+
+Best Subset Selection involves examining all possible combinations of predictors and selecting the combination that results in the best model according to a specific criterion, such as the lowest prediction error or the highest R-squared value. This method is particularly useful for identifying models that balance complexity and predictive accuracy, thereby helping to avoid overfitting while still capturing essential features of the data.
+
+```{r}
+#| echo: true
+#| code-fold: true
+#| warning: false
+#| result: true
+
+
+
+predict.regsubsets <- function(object, newdata, id, ...) {
+  form <- as.formula(object$call[[2]])
+  mat <- model.matrix(form, newdata)
+  coefi <- coef(object, id = id)
+  xvars <- names(coefi)
+  mat[, xvars] %*% coefi
+}
+
+
+sl_klar_train <- sl_klar[train,]
+sl_klar_test <- sl_klar[test,]
+
+k <- 10 # Vi danner 10 folds
+n <- nrow(sl_klar_train) # registrerer hvor mange observationer, vi har.
+set.seed(123) 
+folds <- sample(rep(1:k, length = n)) #Vi tildeler en værdi mellem 1 og n
+dim(sl_klar_train)[2]  # Der er 17 variabler og dermed 16 prædiktorer
+
+cv.errors <- matrix(NA, k, 16,
+                    dimnames = list(NULL, paste(1:16)))
+cv.errors
+
+
+for (j in 1:k) { # her gennemløbes alle folds
+  best.fit <- regsubsets(Tilskuere ~ .,
+                         data = sl_klar_train[folds != j, ],
+                         nvmax = 16)
+  for (i in 1:16) { # her gennemløbes alle kandidatmodeller
+    pred <- predict(best.fit, sl_klar_train[folds == j, ], id = i)
+    # predict-funktionen ovenfor kalder den funktion, vi har lavet tidligere. 
+    cv.errors[j, i] <-
+      mean((sl_klar_train$Tilskuere[folds == j] - pred)^2) # Her udregnes MSE for hver 
+    # fold for hver kandidatmodel 
+  }
+}
+
+mean.cv.errors <- apply(cv.errors, 2, mean) # apply er en smart funktion, der 
+# gennemløber alle rækker og tager gennemsnittet henover hver søjle, som svarer 
+# til hver kandidatmodel.
+mean.cv.errors # Vi får altså en gennemsnitlig MSE for hver kandidatmodel.
+par(mfrow = c(1, 1))
+plot(mean.cv.errors, type = "b") # Her plottes disse gennemsnit for hver størrelse,
+which.min(mean.cv.errors)
+
+
+# Her fittes modellen til ALLE træningsdata
+reg.best <- regsubsets(Tilskuere ~ ., data = sl_klar_train,
+                       nvmax = 16)
+coef(reg.best, 3)
+# Her testes modellen på nye data (Test data)
+pred_best_subset <- predict(reg.best, sl_klar_test, id = 3)
+
+
+mse_best_subset <- mean((sl_klar[test,]$Tilskuere - pred_best_subset)^2)
+mse_best_subset
 ```
 
 **Lasso**
 
-Choosing Optimal Lambda (or Alpha):
-For each combination of lambda values (both for Lasso and Ridge), the model is trained on k-1 folds and validated on the remaining fold. The average MSE across all folds for each lambda value is calculated.
+Choosing Optimal Lambda (or Alpha): For each combination of lambda values (both for Lasso and Ridge), the model is trained on k-1 folds and validated on the remaining fold. The average MSE across all folds for each lambda value is calculated.
 
 ```{r}
 #| echo: true
@@ -1114,6 +1183,7 @@ The best performing model is here shown as the linear regression, since the MSE 
 ```{r}
 mse_lin
 mse_lasso
+mse_best_subset
 ```
 
 ### Implementation
