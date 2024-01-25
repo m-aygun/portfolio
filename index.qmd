@@ -1,5 +1,5 @@
 ---
-title: "Portefolio"
+title: "Portfolio"
 description: Prediction of viewers for VFF homegames
 date: today # other options: now, last-modified
 author:
@@ -956,7 +956,7 @@ sl_klar = sl_klar %>%
 
 ### Data Preparation
 
-After importing the data the data has been cleaned and quantitative and qualitative variabels has been created
+After importing the data the data has been cleaned and quantitative and qualitative variables has been created
 
 ### Modeling
 
@@ -1131,10 +1131,11 @@ ggplot(melted_cor_matrix, aes(Var1, Var2, fill = value)) +
   labs(fill = "Korrelation")
 
 ggpairs(sl_klar[, c("Tilskuere", "Temperatur", "Vindhastighed", 
-                      "Fugtighed", "Synlighed", "Nedbør sidste time", 
-                      "Fugtighed den sidste time", "indbyggertal")], 
+                    "Fugtighed", "Synlighed", "Nedbør sidste time", 
+                    "Fugtighed den sidste time", "indbyggertal")], 
         lower = list(continuous = wrap("cor", size = 3)),
-        diag = list(continuous = "densityDiag"))
+        diag = list(continuous = "densityDiag")) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 
 ```
 
