@@ -16,11 +16,11 @@ format:
   pdf:
     theme: flatly
     toc: true
-    toc-depth: 2
+    toc-depth: 3
     number-sections: true
 ---
 
-![Soccerplayer data](DALL·E%202024-01-20%2008.21.21%20-%20Create%20an%20image%20of%20a%20soccer%20player%20in%20a%20dynamic%20pose,%20looking%20upwards%20towards%20a%20soccer%20ball%20suspended%20in%20the%20air.%20The%20player%20is%20surrounded%20by%20futurist.png){fig-alt="Soccerplayer data"}
+![](DALL·E 2024-01-31 11.36.36 - Generate an image of a soccer player in an active pose, gazing up at a soccer ball floating above. The player's uniform is a combination of green and .png){fig-alt="Soccer player dats" fig-align="center"}
 
 # Introduction
 
