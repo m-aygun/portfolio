@@ -16,6 +16,7 @@ format:
   pdf:
     theme: flatly
     toc: true
+    toc-depth: 2
     number-sections: true
 ---
 
