@@ -20,7 +20,11 @@ format:
     number-sections: true
 ---
 
-![](DALL·E 2024-01-31 11.36.36 - Generate an image of a soccer player in an active pose, gazing up at a soccer ball floating above. The player's uniform is a combination of green and .png){fig-alt="Soccer player dats" fig-align="center"}
+```{r setup, include=FALSE}
+options(width = 80)
+```
+
+![](DALL·E%202024-01-31%2011.36.36%20-%20Generate%20an%20image%20of%20a%20soccer%20player%20in%20an%20active%20pose,%20gazing%20up%20at%20a%20soccer%20ball%20floating%20above.%20The%20player's%20uniform%20is%20a%20combination%20of%20green%20and%20.png){fig-alt="Soccer player dats" fig-align="center"}
 
 # Introduction
 
@@ -63,6 +67,7 @@ Data is imported by API-call and webscrabing. All the data is publicly available
 #| code-fold: true
 #| warning: false
 #| output: false
+#| cache: true
 
 #Vi starter med at hente  tabeller for superligaen, alle sæsoner mellem 2007/2008 - 2023/2024
 
