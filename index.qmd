@@ -20,10 +20,6 @@ format:
     number-sections: true
 ---
 
-```{r setup, include=FALSE}
-options(width = 80)
-```
-
 ![](DALL·E%202024-01-31%2011.36.36%20-%20Generate%20an%20image%20of%20a%20soccer%20player%20in%20an%20active%20pose,%20gazing%20up%20at%20a%20soccer%20ball%20floating%20above.%20The%20player's%20uniform%20is%20a%20combination%20of%20green%20and%20.png){fig-alt="Soccer player dats" fig-align="center"}
 
 # Introduction
@@ -61,6 +57,12 @@ pacman::p_load("rvest", "purrr", "data.table", "stringr", "tidyr", "zoo",
 ## Importing data
 
 Data is imported by API-call and webscrabing. All the data is publicly available. Data is imported from DMI, DST, kalender365.dk and www.superstats.dk. By the end dataset are merged and cleaned in order to do the statistical analysis. Different variables are added in order to perform explorative analysis.
+
+```{r}
+#| include: false
+# Denne kodechunk vil blive kørt, men hverken koden eller resultaterne vil blive vist i outputtet
+api_key <- "&api-key=7d5db05b-3c27-4b2b-ac78-728ddd02a9aa"
+```
 
 ```{r}
 #| echo: true
@@ -722,7 +724,7 @@ end_date <- as.Date("2023-12-04")
 # Basis URL for API-kald
 base_url <- "https://dmigw.govcloud.dk/v2/"
 info_url <- "metObs/collections/observation/items?"
-api_key <- "&api-key=7d5db05b-3c27-4b2b-ac78-728ddd02a9aa" #Husk at indsætte egen DMI
+#api_key <- "&api-key=INDSÆT EGEN NØGLE" #Husk at indsætte egen DMI nøgle
 
 # Initialiser en tom liste til at gemme dataframes for hvert parameter
 all_dataframes_list <- list()
